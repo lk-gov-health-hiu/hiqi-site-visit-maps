@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_f47156231e1126d2b87cb0def07fbe82 {
+                #map_7d792674f39fbad6d55bd8d0af49cd05 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,10 +56,10 @@
     
     
     <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
-                padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
+                padding:10px 16px;border-radius:8px;border:2px solid #2196F3;
                 box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
-      <b style="font-size:15px;color:#FF9800">Trip #14 — Southern – Galle & Matara</b><br>
-      <span style="font-size:12px;color:#444">22–23 Jun 2026</span>
+      <b style="font-size:15px;color:#2196F3">Trip #14 — Southern – Galle & Matara (1 day)</b><br>
+      <span style="font-size:12px;color:#444">22 Jun 2026 (Mon)</span>
     </div>
     
     <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
@@ -70,22 +70,22 @@
       <span style="color:#1E88E5">✚</span> Hospital<br>
       <span style="color:#43A047">■</span> RDHS Office<br>
       <hr style="margin:4px 0">
-      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div>
     </div>
     
-            <div class="folium-map" id="map_f47156231e1126d2b87cb0def07fbe82" ></div>
+            <div class="folium-map" id="map_7d792674f39fbad6d55bd8d0af49cd05" ></div>
         
 </body>
 <script>
     
     
-            var map_f47156231e1126d2b87cb0def07fbe82 = L.map(
-                "map_f47156231e1126d2b87cb0def07fbe82",
+            var map_7d792674f39fbad6d55bd8d0af49cd05 = L.map(
+                "map_7d792674f39fbad6d55bd8d0af49cd05",
                 {
                     center: [6.245625, 80.209375],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 8,
+  "zoom": 10,
   "zoomControl": true,
   "preferCanvas": false,
 }
@@ -97,7 +97,7 @@
 
         
     
-            var tile_layer_75e3ab522d2f61a3d0c0a00d78a3fedf = L.tileLayer(
+            var tile_layer_a0e19b7b5a6039b5751111c3a4f8fe40 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -114,17 +114,17 @@
             );
         
     
-            tile_layer_75e3ab522d2f61a3d0c0a00d78a3fedf.addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            tile_layer_a0e19b7b5a6039b5751111c3a4f8fe40.addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var marker_4bd8369c4611fcb369ccce16ebb17487 = L.marker(
+            var marker_a405229df0380e2f6f0ea13347ce6406 = L.marker(
                 [6.9271, 79.8612],
                 {
 }
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var icon_3c465542208cf28089d3e36d7deb4e6f = L.AwesomeMarkers.icon(
+            var icon_2d809e37364e6d56e0effa08e6d9d606 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -135,24 +135,24 @@
             );
         
     
-        var popup_b891a080c1312ae31519697d729d908c = L.popup({
+        var popup_766c4409099601b935af87b0f358d3d3 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_72151f05e521eeb6803c222f31b3c41f = $(`<div id="html_72151f05e521eeb6803c222f31b3c41f" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
-                popup_b891a080c1312ae31519697d729d908c.setContent(html_72151f05e521eeb6803c222f31b3c41f);
+                var html_b0465024deb2d6ae87d5aab27c181f61 = $(`<div id="html_b0465024deb2d6ae87d5aab27c181f61" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_766c4409099601b935af87b0f358d3d3.setContent(html_b0465024deb2d6ae87d5aab27c181f61);
             
         
 
-        marker_4bd8369c4611fcb369ccce16ebb17487.bindPopup(popup_b891a080c1312ae31519697d729d908c)
+        marker_a405229df0380e2f6f0ea13347ce6406.bindPopup(popup_766c4409099601b935af87b0f358d3d3)
         ;
 
         
     
     
-            marker_4bd8369c4611fcb369ccce16ebb17487.bindTooltip(
+            marker_a405229df0380e2f6f0ea13347ce6406.bindTooltip(
                 `<div>
                      Colombo (Base)
                  </div>`,
@@ -162,17 +162,17 @@
             );
         
     
-                marker_4bd8369c4611fcb369ccce16ebb17487.setIcon(icon_3c465542208cf28089d3e36d7deb4e6f);
+                marker_a405229df0380e2f6f0ea13347ce6406.setIcon(icon_2d809e37364e6d56e0effa08e6d9d606);
             
     
-            var marker_c24f050335188a44224725bf31570aeb = L.marker(
+            var marker_873864a428d0f4c5f3b106625696022f = L.marker(
                 [6.0536, 80.22],
                 {
 }
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var icon_57b628a80ad08e09d32d1249afde9f6a = L.AwesomeMarkers.icon(
+            var icon_cbe4a4684452ea8c84f6c91595ea1304 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -183,24 +183,24 @@
             );
         
     
-        var popup_4307ab5c86fa3f5d11b7ffe3203150ec = L.popup({
+        var popup_96cfddd086d7f0f98bcc9c0531c0274b = L.popup({
   "maxWidth": 280,
 });
 
         
             
-                var html_e4a1c9cd724fdee5542df9b439e4649d = $(`<div id="html_e4a1c9cd724fdee5542df9b439e4649d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">National Hospital Karapitiya</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara<br>       <b>Day 1</b>     </div></div>`)[0];
-                popup_4307ab5c86fa3f5d11b7ffe3203150ec.setContent(html_e4a1c9cd724fdee5542df9b439e4649d);
+                var html_f0d75b6183d16566a37db8903beda226 = $(`<div id="html_f0d75b6183d16566a37db8903beda226" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">National Hospital Karapitiya</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara (1 day)<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_96cfddd086d7f0f98bcc9c0531c0274b.setContent(html_f0d75b6183d16566a37db8903beda226);
             
         
 
-        marker_c24f050335188a44224725bf31570aeb.bindPopup(popup_4307ab5c86fa3f5d11b7ffe3203150ec)
+        marker_873864a428d0f4c5f3b106625696022f.bindPopup(popup_96cfddd086d7f0f98bcc9c0531c0274b)
         ;
 
         
     
     
-            marker_c24f050335188a44224725bf31570aeb.bindTooltip(
+            marker_873864a428d0f4c5f3b106625696022f.bindTooltip(
                 `<div>
                      Day 1: National Hospital Karapitiya
                  </div>`,
@@ -210,17 +210,17 @@
             );
         
     
-                marker_c24f050335188a44224725bf31570aeb.setIcon(icon_57b628a80ad08e09d32d1249afde9f6a);
+                marker_873864a428d0f4c5f3b106625696022f.setIcon(icon_cbe4a4684452ea8c84f6c91595ea1304);
             
     
-            var marker_645f38787f8caf6e5ac2c1687c88f3b7 = L.marker(
+            var marker_1c2be224ee4c753e4bd70f39d79a3c77 = L.marker(
                 [6.0536, 80.22],
                 {
 }
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var div_icon_9fccb8bc1279ca951dcb11023fcd3a65 = L.divIcon({
+            var div_icon_67217ccc39fe597c9f988530e2955841 = L.divIcon({
   "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
   "iconSize": [30, 20],
   "iconAnchor": [0, 0],
@@ -228,17 +228,17 @@
 });
         
     
-                marker_645f38787f8caf6e5ac2c1687c88f3b7.setIcon(div_icon_9fccb8bc1279ca951dcb11023fcd3a65);
+                marker_1c2be224ee4c753e4bd70f39d79a3c77.setIcon(div_icon_67217ccc39fe597c9f988530e2955841);
             
     
-            var marker_3fb31f4d081dd4b5c9313554478d3115 = L.marker(
+            var marker_010e722432e5281daf929563c0e47bb0 = L.marker(
                 [6.0535, 80.221],
                 {
 }
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var icon_1911d2b77f4f84297b9e3f5581fb7b25 = L.AwesomeMarkers.icon(
+            var icon_4750c0d4e351c90f93934dfbefc49bb8 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -249,24 +249,24 @@
             );
         
     
-        var popup_a4c71d35d5cd927726b0387e680fe3af = L.popup({
+        var popup_e35c48baff788f9c1c8146d4214a68e9 = L.popup({
   "maxWidth": 280,
 });
 
         
             
-                var html_f943c72854d8820680a00952e802f372 = $(`<div id="html_f943c72854d8820680a00952e802f372" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Galle</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara<br>       <b>Day 1</b>     </div></div>`)[0];
-                popup_a4c71d35d5cd927726b0387e680fe3af.setContent(html_f943c72854d8820680a00952e802f372);
+                var html_1cb776f26e8d1f2b9c803f60d6472cf3 = $(`<div id="html_1cb776f26e8d1f2b9c803f60d6472cf3" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Galle</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara (1 day)<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_e35c48baff788f9c1c8146d4214a68e9.setContent(html_1cb776f26e8d1f2b9c803f60d6472cf3);
             
         
 
-        marker_3fb31f4d081dd4b5c9313554478d3115.bindPopup(popup_a4c71d35d5cd927726b0387e680fe3af)
+        marker_010e722432e5281daf929563c0e47bb0.bindPopup(popup_e35c48baff788f9c1c8146d4214a68e9)
         ;
 
         
     
     
-            marker_3fb31f4d081dd4b5c9313554478d3115.bindTooltip(
+            marker_010e722432e5281daf929563c0e47bb0.bindTooltip(
                 `<div>
                      Day 1: RDHS Office Galle
                  </div>`,
@@ -276,17 +276,17 @@
             );
         
     
-                marker_3fb31f4d081dd4b5c9313554478d3115.setIcon(icon_1911d2b77f4f84297b9e3f5581fb7b25);
+                marker_010e722432e5281daf929563c0e47bb0.setIcon(icon_4750c0d4e351c90f93934dfbefc49bb8);
             
     
-            var marker_233d8a2536d33bcea096657d60b67f5f = L.marker(
+            var marker_c54eff0bfa5d8e806ecc711d4541dda7 = L.marker(
                 [6.0535, 80.221],
                 {
 }
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var div_icon_e2f96dff1064e60e9b85939e73a58249 = L.divIcon({
+            var div_icon_145b30307301181a74632c8061ca0d5f = L.divIcon({
   "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
   "iconSize": [30, 20],
   "iconAnchor": [0, 0],
@@ -294,17 +294,17 @@
 });
         
     
-                marker_233d8a2536d33bcea096657d60b67f5f.setIcon(div_icon_e2f96dff1064e60e9b85939e73a58249);
+                marker_c54eff0bfa5d8e806ecc711d4541dda7.setIcon(div_icon_145b30307301181a74632c8061ca0d5f);
             
     
-            var marker_3cbb28fd69240db567b8734698242b6a = L.marker(
+            var marker_89b8e379dba9a617bc891a49353122de = L.marker(
                 [5.9483, 80.5353],
                 {
 }
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var icon_47b58aecc789ec5ba8faa0634694851f = L.AwesomeMarkers.icon(
+            var icon_b196a4a75184084b9be5862ab69dbf52 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -315,26 +315,26 @@
             );
         
     
-        var popup_a4bbf41e87f6ec17750a1c06c98fe251 = L.popup({
+        var popup_715ba77dbf5d95faf4f4718c23bd6b64 = L.popup({
   "maxWidth": 280,
 });
 
         
             
-                var html_29aad0d9b4ae0b29640294255ebf9662 = $(`<div id="html_29aad0d9b4ae0b29640294255ebf9662" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Matara</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara<br>       <b>Day 2</b>     </div></div>`)[0];
-                popup_a4bbf41e87f6ec17750a1c06c98fe251.setContent(html_29aad0d9b4ae0b29640294255ebf9662);
+                var html_3978191ab81d51d3dd013de940bc58f4 = $(`<div id="html_3978191ab81d51d3dd013de940bc58f4" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Matara</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara (1 day)<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_715ba77dbf5d95faf4f4718c23bd6b64.setContent(html_3978191ab81d51d3dd013de940bc58f4);
             
         
 
-        marker_3cbb28fd69240db567b8734698242b6a.bindPopup(popup_a4bbf41e87f6ec17750a1c06c98fe251)
+        marker_89b8e379dba9a617bc891a49353122de.bindPopup(popup_715ba77dbf5d95faf4f4718c23bd6b64)
         ;
 
         
     
     
-            marker_3cbb28fd69240db567b8734698242b6a.bindTooltip(
+            marker_89b8e379dba9a617bc891a49353122de.bindTooltip(
                 `<div>
-                     Day 2: RDHS Office Matara
+                     Day 1: RDHS Office Matara
                  </div>`,
                 {
   "sticky": true,
@@ -342,34 +342,34 @@
             );
         
     
-                marker_3cbb28fd69240db567b8734698242b6a.setIcon(icon_47b58aecc789ec5ba8faa0634694851f);
+                marker_89b8e379dba9a617bc891a49353122de.setIcon(icon_b196a4a75184084b9be5862ab69dbf52);
             
     
-            var marker_ba27d74c8dd3d97c74780dc7d445d2fc = L.marker(
+            var marker_d964f1f4db67dabaf5c2a110032c2989 = L.marker(
                 [5.9483, 80.5353],
                 {
 }
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            var div_icon_ef7533ddfd4d9630162055c8abc3ef7a = L.divIcon({
-  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+            var div_icon_45a9da1b27d00a6d7437cca2e67fe063 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
   "iconSize": [30, 20],
   "iconAnchor": [0, 0],
   "className": "empty",
 });
         
     
-                marker_ba27d74c8dd3d97c74780dc7d445d2fc.setIcon(div_icon_ef7533ddfd4d9630162055c8abc3ef7a);
+                marker_d964f1f4db67dabaf5c2a110032c2989.setIcon(div_icon_45a9da1b27d00a6d7437cca2e67fe063);
             
     
-            var poly_line_15491bb697e91486d2eba0322db4a68c = L.polyline(
+            var poly_line_30bf8dc85af9a1d4481dcfb815a2759d = L.polyline(
                 [[6.9271, 79.8612], [6.0536, 80.22], [6.0535, 80.221], [5.9483, 80.5353], [6.9271, 79.8612]],
-                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            poly_line_15491bb697e91486d2eba0322db4a68c.bindTooltip(
+            poly_line_30bf8dc85af9a1d4481dcfb815a2759d.bindTooltip(
                 `<div>
                      Trip #14 route
                  </div>`,
@@ -379,11 +379,11 @@
             );
         
     
-            ant_path_a7b5ba45277c455ca44e61892812fc6e = L.polyline.antPath(
+            ant_path_416c3bc027c6704c1dc89404f8f157ac = L.polyline.antPath(
               [[6.9271, 79.8612], [6.0536, 80.22], [6.0535, 80.221], [5.9483, 80.5353], [6.9271, 79.8612]],
               {
   "stroke": true,
-  "color": "#FF9800",
+  "color": "#2196F3",
   "weight": 3,
   "opacity": 0.5,
   "lineCap": "round",
@@ -394,7 +394,7 @@
 ],
   "dashOffset": null,
   "fill": false,
-  "fillColor": "#FF9800",
+  "fillColor": "#2196F3",
   "fillOpacity": 0.2,
   "fillRule": "evenodd",
   "bubblingMouseEvents": true,
@@ -406,10 +406,10 @@
   "delay": 1200,
   "pulseColor": "#FFFFFF",
 }
-        ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        ).addTo(map_7d792674f39fbad6d55bd8d0af49cd05);
         
     
-            map_f47156231e1126d2b87cb0def07fbe82.fitBounds(
+            map_7d792674f39fbad6d55bd8d0af49cd05.fitBounds(
                 [[5.8983, 79.8112], [6.9771, 80.5853]],
                 {}
             );
