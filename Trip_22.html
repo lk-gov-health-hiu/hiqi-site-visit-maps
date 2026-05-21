@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7879d24e07cacf1795593dd2927f963b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #9C27B0;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#9C27B0">Trip #22 — Kekirawa, Anuradhapura & Kebithigollawa</b><br>
+      <span style="font-size:12px;color:#444">31 Aug – 02 Sep 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_7879d24e07cacf1795593dd2927f963b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7879d24e07cacf1795593dd2927f963b = L.map(
+                "map_7879d24e07cacf1795593dd2927f963b",
+                {
+                    center: [7.990875000000001, 80.446225],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_ff70e39c7f3c866bdad01fab032875a8 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_ff70e39c7f3c866bdad01fab032875a8.addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var marker_b098fed8991a8d66848c04fddc3a3a9f = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var icon_920e6aa5b8f50449eec3ec38f1109387 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_05aed8ec095e8e10c5d393ad7db67498 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_07fc4793200e4cace2bce56feb53d62e = $(`<div id="html_07fc4793200e4cace2bce56feb53d62e" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_05aed8ec095e8e10c5d393ad7db67498.setContent(html_07fc4793200e4cace2bce56feb53d62e);
+            
+        
+
+        marker_b098fed8991a8d66848c04fddc3a3a9f.bindPopup(popup_05aed8ec095e8e10c5d393ad7db67498)
+        ;
+
+        
+    
+    
+            marker_b098fed8991a8d66848c04fddc3a3a9f.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b098fed8991a8d66848c04fddc3a3a9f.setIcon(icon_920e6aa5b8f50449eec3ec38f1109387);
+            
+    
+            var marker_10969fbfde9cd213fdb974748609b6b7 = L.marker(
+                [8.0233, 80.6167],
+                {
+}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var icon_7abaaa2f5dd623780aa614915d91c54e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_263e80625199237f581339fe95cfa2b7 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7b166d09d892e1216a9be77df1e1519e = $(`<div id="html_7b166d09d892e1216a9be77df1e1519e" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Kekirawa</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #22:</b> Kekirawa, Anuradhapura & Kebithigollawa<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_263e80625199237f581339fe95cfa2b7.setContent(html_7b166d09d892e1216a9be77df1e1519e);
+            
+        
+
+        marker_10969fbfde9cd213fdb974748609b6b7.bindPopup(popup_263e80625199237f581339fe95cfa2b7)
+        ;
+
+        
+    
+    
+            marker_10969fbfde9cd213fdb974748609b6b7.bindTooltip(
+                `<div>
+                     Day 1: Base Hospital Kekirawa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_10969fbfde9cd213fdb974748609b6b7.setIcon(icon_7abaaa2f5dd623780aa614915d91c54e);
+            
+    
+            var marker_e2a1e6741d37c95b409ca5d373517040 = L.marker(
+                [8.0233, 80.6167],
+                {
+}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var div_icon_8811802929819831fc2585b2bd16133a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_e2a1e6741d37c95b409ca5d373517040.setIcon(div_icon_8811802929819831fc2585b2bd16133a);
+            
+    
+            var marker_21b4aebff43536338bde3831c0bca044 = L.marker(
+                [8.3114, 80.4037],
+                {
+}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var icon_81f5c77ea90478a757fdf011b636b280 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dd51275046b5e8c9831481a79350424b = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_11d79eccaa1560d68dfefc9eec3764cb = $(`<div id="html_11d79eccaa1560d68dfefc9eec3764cb" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Anuradhapura</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #22:</b> Kekirawa, Anuradhapura & Kebithigollawa<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_dd51275046b5e8c9831481a79350424b.setContent(html_11d79eccaa1560d68dfefc9eec3764cb);
+            
+        
+
+        marker_21b4aebff43536338bde3831c0bca044.bindPopup(popup_dd51275046b5e8c9831481a79350424b)
+        ;
+
+        
+    
+    
+            marker_21b4aebff43536338bde3831c0bca044.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Anuradhapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_21b4aebff43536338bde3831c0bca044.setIcon(icon_81f5c77ea90478a757fdf011b636b280);
+            
+    
+            var marker_c19b3547871570000d0171cd19ff7adc = L.marker(
+                [8.3114, 80.4037],
+                {
+}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var div_icon_f6c45bfbf314ad16f36c9b26e4eaf636 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_c19b3547871570000d0171cd19ff7adc.setIcon(div_icon_f6c45bfbf314ad16f36c9b26e4eaf636);
+            
+    
+            var marker_81fa4180c9ba9f79a894e890c1b6da16 = L.marker(
+                [8.7017, 80.9033],
+                {
+}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var icon_60934f7c322d9c7c989f7ee4f7fef917 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d868584f5255614a9f1d49375535a93 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_7d4014d3b75ceca1d7cf1e861e68393d = $(`<div id="html_7d4014d3b75ceca1d7cf1e861e68393d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Kebithigollawa</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #22:</b> Kekirawa, Anuradhapura & Kebithigollawa<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_4d868584f5255614a9f1d49375535a93.setContent(html_7d4014d3b75ceca1d7cf1e861e68393d);
+            
+        
+
+        marker_81fa4180c9ba9f79a894e890c1b6da16.bindPopup(popup_4d868584f5255614a9f1d49375535a93)
+        ;
+
+        
+    
+    
+            marker_81fa4180c9ba9f79a894e890c1b6da16.bindTooltip(
+                `<div>
+                     Day 2: Base Hospital Kebithigollawa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_81fa4180c9ba9f79a894e890c1b6da16.setIcon(icon_60934f7c322d9c7c989f7ee4f7fef917);
+            
+    
+            var marker_7de56868adba5b19afa332b810fa40d9 = L.marker(
+                [8.7017, 80.9033],
+                {
+}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            var div_icon_db99e0fab02b75962a3c3c34807f9dbb = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_7de56868adba5b19afa332b810fa40d9.setIcon(div_icon_db99e0fab02b75962a3c3c34807f9dbb);
+            
+    
+            var poly_line_4cac2d161ed1dcb00dcb83c619fc9ecf = L.polyline(
+                [[6.9271, 79.8612], [8.0233, 80.6167], [8.3114, 80.4037], [8.7017, 80.9033], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#9C27B0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#9C27B0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            poly_line_4cac2d161ed1dcb00dcb83c619fc9ecf.bindTooltip(
+                `<div>
+                     Trip #22 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_2262a680d6f754f8236cb4835e7738b1 = L.polyline.antPath(
+              [[6.9271, 79.8612], [8.0233, 80.6167], [8.3114, 80.4037], [8.7017, 80.9033], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#9C27B0",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#9C27B0",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_7879d24e07cacf1795593dd2927f963b);
+        
+    
+            map_7879d24e07cacf1795593dd2927f963b.fitBounds(
+                [[6.8771, 79.8112], [8.751700000000001, 80.9533]],
+                {}
+            );
+        
+</script>
+</html>

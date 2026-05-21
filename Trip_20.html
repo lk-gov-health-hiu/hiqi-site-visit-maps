@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_7b7f33f6dd6ea7e85bd679943361b1bb {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#FF9800">Trip #20 — Bibile & Monaragala</b><br>
+      <span style="font-size:12px;color:#444">10–11 Aug 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_7b7f33f6dd6ea7e85bd679943361b1bb" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_7b7f33f6dd6ea7e85bd679943361b1bb = L.map(
+                "map_7b7f33f6dd6ea7e85bd679943361b1bb",
+                {
+                    center: [6.987266666666667, 80.80853333333333],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_a77285d6ff0e5a31a5f830a2b3dfbc44 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_a77285d6ff0e5a31a5f830a2b3dfbc44.addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            var marker_5654121d96791b7cab40da2623c86648 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            var icon_6a158edf6f5fb56304a9fb9e745760e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c0758935947920bd12fcd4b24b90e87 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_264672f0be6c8b80ed4f97d271f49c6b = $(`<div id="html_264672f0be6c8b80ed4f97d271f49c6b" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_3c0758935947920bd12fcd4b24b90e87.setContent(html_264672f0be6c8b80ed4f97d271f49c6b);
+            
+        
+
+        marker_5654121d96791b7cab40da2623c86648.bindPopup(popup_3c0758935947920bd12fcd4b24b90e87)
+        ;
+
+        
+    
+    
+            marker_5654121d96791b7cab40da2623c86648.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5654121d96791b7cab40da2623c86648.setIcon(icon_6a158edf6f5fb56304a9fb9e745760e7);
+            
+    
+            var marker_6a9b1793dde60611c5cab65e263668fc = L.marker(
+                [7.1619, 81.2136],
+                {
+}
+            ).addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            var icon_6323ec69469200b4460cc737085815af = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_224be2e4e52550e11082287eba7ae796 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_8e6b5f3d463abff1eacbbe81eb64e18b = $(`<div id="html_8e6b5f3d463abff1eacbbe81eb64e18b" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Bibile</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #20:</b> Bibile & Monaragala<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_224be2e4e52550e11082287eba7ae796.setContent(html_8e6b5f3d463abff1eacbbe81eb64e18b);
+            
+        
+
+        marker_6a9b1793dde60611c5cab65e263668fc.bindPopup(popup_224be2e4e52550e11082287eba7ae796)
+        ;
+
+        
+    
+    
+            marker_6a9b1793dde60611c5cab65e263668fc.bindTooltip(
+                `<div>
+                     Day 1: Base Hospital Bibile
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a9b1793dde60611c5cab65e263668fc.setIcon(icon_6323ec69469200b4460cc737085815af);
+            
+    
+            var marker_5043a44e3bb5ea8f1b507d9f63f660d5 = L.marker(
+                [7.1619, 81.2136],
+                {
+}
+            ).addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            var div_icon_6286bef2dadb9f07bc789dc918d95957 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_5043a44e3bb5ea8f1b507d9f63f660d5.setIcon(div_icon_6286bef2dadb9f07bc789dc918d95957);
+            
+    
+            var marker_0f7f44fe073e4400d98cef659a1320cb = L.marker(
+                [6.8728, 81.3508],
+                {
+}
+            ).addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            var icon_e6b3f93c9b892cf4234409f7df59a941 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2ced83a136f81dfcf79fc56a964cceb8 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4120ee5ae1fbdc11dcfd1de9f6c3157d = $(`<div id="html_4120ee5ae1fbdc11dcfd1de9f6c3157d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Monaragala</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #20:</b> Bibile & Monaragala<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_2ced83a136f81dfcf79fc56a964cceb8.setContent(html_4120ee5ae1fbdc11dcfd1de9f6c3157d);
+            
+        
+
+        marker_0f7f44fe073e4400d98cef659a1320cb.bindPopup(popup_2ced83a136f81dfcf79fc56a964cceb8)
+        ;
+
+        
+    
+    
+            marker_0f7f44fe073e4400d98cef659a1320cb.bindTooltip(
+                `<div>
+                     Day 2: RDHS Office Monaragala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0f7f44fe073e4400d98cef659a1320cb.setIcon(icon_e6b3f93c9b892cf4234409f7df59a941);
+            
+    
+            var marker_30f42807b11ae606d92ab25468147781 = L.marker(
+                [6.8728, 81.3508],
+                {
+}
+            ).addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            var div_icon_4de8196e60814a12c11cedbd4dca9a63 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_30f42807b11ae606d92ab25468147781.setIcon(div_icon_4de8196e60814a12c11cedbd4dca9a63);
+            
+    
+            var poly_line_6f377e73bc6353f225e45264a66d9e31 = L.polyline(
+                [[6.9271, 79.8612], [7.1619, 81.2136], [6.8728, 81.3508], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            poly_line_6f377e73bc6353f225e45264a66d9e31.bindTooltip(
+                `<div>
+                     Trip #20 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_62177ea92bc163cb7cb31bce57d315a1 = L.polyline.antPath(
+              [[6.9271, 79.8612], [7.1619, 81.2136], [6.8728, 81.3508], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#FF9800",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#FF9800",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_7b7f33f6dd6ea7e85bd679943361b1bb);
+        
+    
+            map_7b7f33f6dd6ea7e85bd679943361b1bb.fitBounds(
+                [[6.8228, 79.8112], [7.2119, 81.4008]],
+                {}
+            );
+        
+</script>
+</html>

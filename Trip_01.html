@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_d46ff712a2baacde01b31f267c0fe7cf {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #2196F3;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#2196F3">Trip #1 — Colombo – De Zoysa & RDHS Colombo</b><br>
+      <span style="font-size:12px;color:#444">01 Jun 2026 (Mon)</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_d46ff712a2baacde01b31f267c0fe7cf" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_d46ff712a2baacde01b31f267c0fe7cf = L.map(
+                "map_d46ff712a2baacde01b31f267c0fe7cf",
+                {
+                    center: [6.922966666666667, 79.86553333333333],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_98fe2b8783c7f0c34bac155aa80b729c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_98fe2b8783c7f0c34bac155aa80b729c.addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            var marker_eb71019d77bc6756d7c38ddbf2aa4539 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            var icon_b4b242520aa900fa68e02f39168d131d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_dc455f98a61ac322c8a1c5d1477cecb5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_8febe49759d12a3d9c8979979ed6d1a3 = $(`<div id="html_8febe49759d12a3d9c8979979ed6d1a3" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_dc455f98a61ac322c8a1c5d1477cecb5.setContent(html_8febe49759d12a3d9c8979979ed6d1a3);
+            
+        
+
+        marker_eb71019d77bc6756d7c38ddbf2aa4539.bindPopup(popup_dc455f98a61ac322c8a1c5d1477cecb5)
+        ;
+
+        
+    
+    
+            marker_eb71019d77bc6756d7c38ddbf2aa4539.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_eb71019d77bc6756d7c38ddbf2aa4539.setIcon(icon_b4b242520aa900fa68e02f39168d131d);
+            
+    
+            var marker_d3301f2734c365397588b55e142bb6c9 = L.marker(
+                [6.9147, 79.8742],
+                {
+}
+            ).addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            var icon_944796d16d7651f3a3730949c08b3f26 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fdd404328a4fc45ca6ecb47bd1c16441 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f4847b349487a77ee0eda588377320cc = $(`<div id="html_f4847b349487a77ee0eda588377320cc" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">De Zoysa Hospital for Women</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #1:</b> Colombo – De Zoysa & RDHS Colombo<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_fdd404328a4fc45ca6ecb47bd1c16441.setContent(html_f4847b349487a77ee0eda588377320cc);
+            
+        
+
+        marker_d3301f2734c365397588b55e142bb6c9.bindPopup(popup_fdd404328a4fc45ca6ecb47bd1c16441)
+        ;
+
+        
+    
+    
+            marker_d3301f2734c365397588b55e142bb6c9.bindTooltip(
+                `<div>
+                     Day 1: De Zoysa Hospital for Women
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d3301f2734c365397588b55e142bb6c9.setIcon(icon_944796d16d7651f3a3730949c08b3f26);
+            
+    
+            var marker_3c08ac711c5ef60d8f2f093429f11834 = L.marker(
+                [6.9147, 79.8742],
+                {
+}
+            ).addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            var div_icon_0eeebbeacb205e8495ff893783e0f7fd = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_3c08ac711c5ef60d8f2f093429f11834.setIcon(div_icon_0eeebbeacb205e8495ff893783e0f7fd);
+            
+    
+            var marker_6fda6b518ea789a0fb8d9685b8977cee = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            var icon_e6dac0e0a124947f77d8bf7676932137 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bad958d0b79ddfb67987bc119cacdb37 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_59220635ab9ee579f2e491e210804263 = $(`<div id="html_59220635ab9ee579f2e491e210804263" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Colombo</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #1:</b> Colombo – De Zoysa & RDHS Colombo<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_bad958d0b79ddfb67987bc119cacdb37.setContent(html_59220635ab9ee579f2e491e210804263);
+            
+        
+
+        marker_6fda6b518ea789a0fb8d9685b8977cee.bindPopup(popup_bad958d0b79ddfb67987bc119cacdb37)
+        ;
+
+        
+    
+    
+            marker_6fda6b518ea789a0fb8d9685b8977cee.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Colombo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6fda6b518ea789a0fb8d9685b8977cee.setIcon(icon_e6dac0e0a124947f77d8bf7676932137);
+            
+    
+            var marker_c7671ccc0051f240e10379d16e75cebe = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            var div_icon_c52b7fd0903a8cf5ed1f307bc8d0c4d0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_c7671ccc0051f240e10379d16e75cebe.setIcon(div_icon_c52b7fd0903a8cf5ed1f307bc8d0c4d0);
+            
+    
+            var poly_line_4d7eb5d702c80bfe7a85c05dff61f944 = L.polyline(
+                [[6.9271, 79.8612], [6.9147, 79.8742], [6.9271, 79.8612], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            poly_line_4d7eb5d702c80bfe7a85c05dff61f944.bindTooltip(
+                `<div>
+                     Trip #1 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_d430d5564a378a74fe6147807a2b8148 = L.polyline.antPath(
+              [[6.9271, 79.8612], [6.9147, 79.8742], [6.9271, 79.8612], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#2196F3",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#2196F3",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_d46ff712a2baacde01b31f267c0fe7cf);
+        
+    
+            map_d46ff712a2baacde01b31f267c0fe7cf.fitBounds(
+                [[6.8647, 79.8112], [6.9771, 79.9242]],
+                {}
+            );
+        
+</script>
+</html>

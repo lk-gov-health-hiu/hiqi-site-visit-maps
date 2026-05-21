@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_49359e8e18e34b19a9d01e8d4472b33a {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #2196F3;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#2196F3">Trip #13 — RDHS Kalutara & RDHS Ratnapura</b><br>
+      <span style="font-size:12px;color:#444">17 Jun 2026 (Wed)</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_49359e8e18e34b19a9d01e8d4472b33a" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_49359e8e18e34b19a9d01e8d4472b33a = L.map(
+                "map_49359e8e18e34b19a9d01e8d4472b33a",
+                {
+                    center: [6.731766666666666, 80.07406666666667],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_0f03a5a0c553739ea5272b5c707652ce = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_0f03a5a0c553739ea5272b5c707652ce.addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            var marker_a9baf3e870828912728201e9955be7c0 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            var icon_01f1ceedc985e5efc6d44be58867d6a2 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_cef0066a1f4ce372c6880d4a56e453d6 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_e78588e8c8a72923e57f5ce1ae15710c = $(`<div id="html_e78588e8c8a72923e57f5ce1ae15710c" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_cef0066a1f4ce372c6880d4a56e453d6.setContent(html_e78588e8c8a72923e57f5ce1ae15710c);
+            
+        
+
+        marker_a9baf3e870828912728201e9955be7c0.bindPopup(popup_cef0066a1f4ce372c6880d4a56e453d6)
+        ;
+
+        
+    
+    
+            marker_a9baf3e870828912728201e9955be7c0.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a9baf3e870828912728201e9955be7c0.setIcon(icon_01f1ceedc985e5efc6d44be58867d6a2);
+            
+    
+            var marker_dd9bd0b32467065c4c1bdf2a5e297c81 = L.marker(
+                [6.5854, 79.9607],
+                {
+}
+            ).addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            var icon_cb4a97e67626401e64ecd77c8ff2bd9d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04fb9a0e2b45f6ca7f0e386fae4e87e9 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_22e0fb0c3248a64f225da81cfe4f5e11 = $(`<div id="html_22e0fb0c3248a64f225da81cfe4f5e11" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Kalutara</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #13:</b> RDHS Kalutara & RDHS Ratnapura<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_04fb9a0e2b45f6ca7f0e386fae4e87e9.setContent(html_22e0fb0c3248a64f225da81cfe4f5e11);
+            
+        
+
+        marker_dd9bd0b32467065c4c1bdf2a5e297c81.bindPopup(popup_04fb9a0e2b45f6ca7f0e386fae4e87e9)
+        ;
+
+        
+    
+    
+            marker_dd9bd0b32467065c4c1bdf2a5e297c81.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Kalutara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd9bd0b32467065c4c1bdf2a5e297c81.setIcon(icon_cb4a97e67626401e64ecd77c8ff2bd9d);
+            
+    
+            var marker_ddc2f5477a3c0db23ce104382081ae59 = L.marker(
+                [6.5854, 79.9607],
+                {
+}
+            ).addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            var div_icon_5f606df27e0b4dd751e9dce7dd7d47f8 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_ddc2f5477a3c0db23ce104382081ae59.setIcon(div_icon_5f606df27e0b4dd751e9dce7dd7d47f8);
+            
+    
+            var marker_4f23e4ee548c1282b5e5a5eca00a235f = L.marker(
+                [6.6828, 80.4003],
+                {
+}
+            ).addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            var icon_59ded5c4b28ddaec716271feef72639d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_5dd7519d1ecaf0bea66617f406664130 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_4a207d79dc4385a7f6ed00f25c7bb8ce = $(`<div id="html_4a207d79dc4385a7f6ed00f25c7bb8ce" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Ratnapura</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #13:</b> RDHS Kalutara & RDHS Ratnapura<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_5dd7519d1ecaf0bea66617f406664130.setContent(html_4a207d79dc4385a7f6ed00f25c7bb8ce);
+            
+        
+
+        marker_4f23e4ee548c1282b5e5a5eca00a235f.bindPopup(popup_5dd7519d1ecaf0bea66617f406664130)
+        ;
+
+        
+    
+    
+            marker_4f23e4ee548c1282b5e5a5eca00a235f.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Ratnapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4f23e4ee548c1282b5e5a5eca00a235f.setIcon(icon_59ded5c4b28ddaec716271feef72639d);
+            
+    
+            var marker_ea62694e6dcf8b40a22c25b66a14dca9 = L.marker(
+                [6.6828, 80.4003],
+                {
+}
+            ).addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            var div_icon_c3b7daee25808cf16c99db82319bb4b7 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_ea62694e6dcf8b40a22c25b66a14dca9.setIcon(div_icon_c3b7daee25808cf16c99db82319bb4b7);
+            
+    
+            var poly_line_f674eeee00f70768601f39ff8230a127 = L.polyline(
+                [[6.9271, 79.8612], [6.5854, 79.9607], [6.6828, 80.4003], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            poly_line_f674eeee00f70768601f39ff8230a127.bindTooltip(
+                `<div>
+                     Trip #13 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_4ded79150d00e7245068163ac7df9adc = L.polyline.antPath(
+              [[6.9271, 79.8612], [6.5854, 79.9607], [6.6828, 80.4003], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#2196F3",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#2196F3",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_49359e8e18e34b19a9d01e8d4472b33a);
+        
+    
+            map_49359e8e18e34b19a9d01e8d4472b33a.fitBounds(
+                [[6.5354, 79.8112], [6.9771, 80.4503]],
+                {}
+            );
+        
+</script>
+</html>

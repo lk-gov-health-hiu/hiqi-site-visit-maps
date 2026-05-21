@@ -1,0 +1,286 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_53f2b96b1659035e365bfc384a6aaa2b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #2196F3;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#2196F3">Trip #3 — National Institute of Mental Health</b><br>
+      <span style="font-size:12px;color:#444">03 Jun 2026 (Wed)</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_53f2b96b1659035e365bfc384a6aaa2b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_53f2b96b1659035e365bfc384a6aaa2b = L.map(
+                "map_53f2b96b1659035e365bfc384a6aaa2b",
+                {
+                    center: [6.93535, 79.886],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 10,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_53153efbe0fe620de7424c0d36feb20e = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_53153efbe0fe620de7424c0d36feb20e.addTo(map_53f2b96b1659035e365bfc384a6aaa2b);
+        
+    
+            var marker_57ed3287038dcf3eb614dc99f3d3d7b4 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_53f2b96b1659035e365bfc384a6aaa2b);
+        
+    
+            var icon_d9924eca86e919e9ab6e82e057ba0124 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_17e4d9a4e0bfd519f34d1811f0129795 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_345d98c0ebc2f8324b510b675386f358 = $(`<div id="html_345d98c0ebc2f8324b510b675386f358" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_17e4d9a4e0bfd519f34d1811f0129795.setContent(html_345d98c0ebc2f8324b510b675386f358);
+            
+        
+
+        marker_57ed3287038dcf3eb614dc99f3d3d7b4.bindPopup(popup_17e4d9a4e0bfd519f34d1811f0129795)
+        ;
+
+        
+    
+    
+            marker_57ed3287038dcf3eb614dc99f3d3d7b4.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_57ed3287038dcf3eb614dc99f3d3d7b4.setIcon(icon_d9924eca86e919e9ab6e82e057ba0124);
+            
+    
+            var marker_1d8a0aedc5324a230e96cf9633f5b7a2 = L.marker(
+                [6.9436, 79.9108],
+                {
+}
+            ).addTo(map_53f2b96b1659035e365bfc384a6aaa2b);
+        
+    
+            var icon_2ce32dabf87bfe641643d316d9af1e91 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_010f66c1e333d70a25982c92a5428787 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f4b8278a082bd2ebd0923605f02237ff = $(`<div id="html_f4b8278a082bd2ebd0923605f02237ff" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">National Institute of Mental Health</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #3:</b> National Institute of Mental Health<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_010f66c1e333d70a25982c92a5428787.setContent(html_f4b8278a082bd2ebd0923605f02237ff);
+            
+        
+
+        marker_1d8a0aedc5324a230e96cf9633f5b7a2.bindPopup(popup_010f66c1e333d70a25982c92a5428787)
+        ;
+
+        
+    
+    
+            marker_1d8a0aedc5324a230e96cf9633f5b7a2.bindTooltip(
+                `<div>
+                     Day 1: National Institute of Mental Health
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1d8a0aedc5324a230e96cf9633f5b7a2.setIcon(icon_2ce32dabf87bfe641643d316d9af1e91);
+            
+    
+            var marker_b992776fb4d35fc25acfe2eaf89bf4d8 = L.marker(
+                [6.9436, 79.9108],
+                {
+}
+            ).addTo(map_53f2b96b1659035e365bfc384a6aaa2b);
+        
+    
+            var div_icon_dde65d98655f8861a9e77e5c118063e5 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_b992776fb4d35fc25acfe2eaf89bf4d8.setIcon(div_icon_dde65d98655f8861a9e77e5c118063e5);
+            
+    
+            var poly_line_81afe0313cfbf8d0b14efe29239266fd = L.polyline(
+                [[6.9271, 79.8612], [6.9436, 79.9108], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_53f2b96b1659035e365bfc384a6aaa2b);
+        
+    
+            poly_line_81afe0313cfbf8d0b14efe29239266fd.bindTooltip(
+                `<div>
+                     Trip #3 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_c952da1f90436c0c80cf3cacf8ba18b5 = L.polyline.antPath(
+              [[6.9271, 79.8612], [6.9436, 79.9108], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#2196F3",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#2196F3",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_53f2b96b1659035e365bfc384a6aaa2b);
+        
+    
+            map_53f2b96b1659035e365bfc384a6aaa2b.fitBounds(
+                [[6.8771, 79.8112], [6.9936, 79.96079999999999]],
+                {}
+            );
+        
+</script>
+</html>

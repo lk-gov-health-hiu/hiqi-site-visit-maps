@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f33c12de3f4f7643a3bb3ab85e236fe9 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#FF9800">Trip #19 — Welimada, Nuwara Eliya & Badulla</b><br>
+      <span style="font-size:12px;color:#444">03–04 Aug 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_f33c12de3f4f7643a3bb3ab85e236fe9" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f33c12de3f4f7643a3bb3ab85e236fe9 = L.map(
+                "map_f33c12de3f4f7643a3bb3ab85e236fe9",
+                {
+                    center: [6.94225, 80.65525],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_b9339fb6ad14fb63dd07d04f17f40d6b = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_b9339fb6ad14fb63dd07d04f17f40d6b.addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var marker_ac6301b392ddf0b398370d526f402241 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var icon_b47c9c590c0dd69eb34b0d6f93240b4d = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4d61665c9107a66fdef5756ca6c1c6cf = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_64b62f46026cacae610cefc34a260845 = $(`<div id="html_64b62f46026cacae610cefc34a260845" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_4d61665c9107a66fdef5756ca6c1c6cf.setContent(html_64b62f46026cacae610cefc34a260845);
+            
+        
+
+        marker_ac6301b392ddf0b398370d526f402241.bindPopup(popup_4d61665c9107a66fdef5756ca6c1c6cf)
+        ;
+
+        
+    
+    
+            marker_ac6301b392ddf0b398370d526f402241.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ac6301b392ddf0b398370d526f402241.setIcon(icon_b47c9c590c0dd69eb34b0d6f93240b4d);
+            
+    
+            var marker_9bda3aa27828b63cfc5be6be5a327123 = L.marker(
+                [6.9028, 80.9153],
+                {
+}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var icon_05ceaa0f2bd27635b7e9600e84dddb21 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_6edf96ca029dc8a53aaecb032870bff7 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_42938b4d65e6b483b04f60fdb8de72a7 = $(`<div id="html_42938b4d65e6b483b04f60fdb8de72a7" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Welimada</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #19:</b> Welimada, Nuwara Eliya & Badulla<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_6edf96ca029dc8a53aaecb032870bff7.setContent(html_42938b4d65e6b483b04f60fdb8de72a7);
+            
+        
+
+        marker_9bda3aa27828b63cfc5be6be5a327123.bindPopup(popup_6edf96ca029dc8a53aaecb032870bff7)
+        ;
+
+        
+    
+    
+            marker_9bda3aa27828b63cfc5be6be5a327123.bindTooltip(
+                `<div>
+                     Day 1: Base Hospital Welimada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9bda3aa27828b63cfc5be6be5a327123.setIcon(icon_05ceaa0f2bd27635b7e9600e84dddb21);
+            
+    
+            var marker_719c0ccf711485fe367647eff29ac0f1 = L.marker(
+                [6.9028, 80.9153],
+                {
+}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var div_icon_4bcbd78145964ef4715efcbde30ed545 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_719c0ccf711485fe367647eff29ac0f1.setIcon(div_icon_4bcbd78145964ef4715efcbde30ed545);
+            
+    
+            var marker_7f70aba7ab2ed5a869b2c04fb94de61e = L.marker(
+                [6.9497, 80.7892],
+                {
+}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var icon_73f82ee55a50491919da3b0f478c0a1c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2dca4221900dc926fbbcc07c5738b10d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_77e8b935eb40d92c74424eb6a6202f0c = $(`<div id="html_77e8b935eb40d92c74424eb6a6202f0c" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Nuwara Eliya</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #19:</b> Welimada, Nuwara Eliya & Badulla<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_2dca4221900dc926fbbcc07c5738b10d.setContent(html_77e8b935eb40d92c74424eb6a6202f0c);
+            
+        
+
+        marker_7f70aba7ab2ed5a869b2c04fb94de61e.bindPopup(popup_2dca4221900dc926fbbcc07c5738b10d)
+        ;
+
+        
+    
+    
+            marker_7f70aba7ab2ed5a869b2c04fb94de61e.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Nuwara Eliya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7f70aba7ab2ed5a869b2c04fb94de61e.setIcon(icon_73f82ee55a50491919da3b0f478c0a1c);
+            
+    
+            var marker_cdb623ab2e70655ea563f70ab6e98f8c = L.marker(
+                [6.9497, 80.7892],
+                {
+}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var div_icon_a693c031f2d56969771ac1304c60eaf1 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_cdb623ab2e70655ea563f70ab6e98f8c.setIcon(div_icon_a693c031f2d56969771ac1304c60eaf1);
+            
+    
+            var marker_9a1ba14b772d181963a002ddb0e659d9 = L.marker(
+                [6.9894, 81.0553],
+                {
+}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var icon_2e13946baab5b0518649d19aac811e48 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b61a13ae00c111781d258a8c9f6e207e = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2db0497ad17380fbb422980f7c06e790 = $(`<div id="html_2db0497ad17380fbb422980f7c06e790" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Badulla</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #19:</b> Welimada, Nuwara Eliya & Badulla<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_b61a13ae00c111781d258a8c9f6e207e.setContent(html_2db0497ad17380fbb422980f7c06e790);
+            
+        
+
+        marker_9a1ba14b772d181963a002ddb0e659d9.bindPopup(popup_b61a13ae00c111781d258a8c9f6e207e)
+        ;
+
+        
+    
+    
+            marker_9a1ba14b772d181963a002ddb0e659d9.bindTooltip(
+                `<div>
+                     Day 2: RDHS Office Badulla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9a1ba14b772d181963a002ddb0e659d9.setIcon(icon_2e13946baab5b0518649d19aac811e48);
+            
+    
+            var marker_1501f1c94d8160a9cd6b0e5f5b3e86a6 = L.marker(
+                [6.9894, 81.0553],
+                {
+}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            var div_icon_1e7177ed1f5e939d379f5ded064ac35f = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_1501f1c94d8160a9cd6b0e5f5b3e86a6.setIcon(div_icon_1e7177ed1f5e939d379f5ded064ac35f);
+            
+    
+            var poly_line_e357c9cd9bdcb0d016503c0c46e90ea9 = L.polyline(
+                [[6.9271, 79.8612], [6.9028, 80.9153], [6.9497, 80.7892], [6.9894, 81.0553], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            poly_line_e357c9cd9bdcb0d016503c0c46e90ea9.bindTooltip(
+                `<div>
+                     Trip #19 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_5cae755a088e34f7818e6643b38d3a1e = L.polyline.antPath(
+              [[6.9271, 79.8612], [6.9028, 80.9153], [6.9497, 80.7892], [6.9894, 81.0553], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#FF9800",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#FF9800",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_f33c12de3f4f7643a3bb3ab85e236fe9);
+        
+    
+            map_f33c12de3f4f7643a3bb3ab85e236fe9.fitBounds(
+                [[6.8528, 79.8112], [7.0394, 81.1053]],
+                {}
+            );
+        
+</script>
+</html>

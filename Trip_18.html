@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_3a5f2871299be5982d4720c953ed8e84 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#FF9800">Trip #18 — Kandy & Matale</b><br>
+      <span style="font-size:12px;color:#444">27–28 Jul 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_3a5f2871299be5982d4720c953ed8e84" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_3a5f2871299be5982d4720c953ed8e84 = L.map(
+                "map_3a5f2871299be5982d4720c953ed8e84",
+                {
+                    center: [7.2285, 80.37310000000001],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_4fec989ade14383ab1a168064c9087da = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_4fec989ade14383ab1a168064c9087da.addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            var marker_6792a953e88b8c366882f2024730c24d = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            var icon_618060f61501f2cadf0709b09c5bf045 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2127bb5eb0735fc83e356f3e678a22d5 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_410a2a58b073ae48278d1fa372a6ee00 = $(`<div id="html_410a2a58b073ae48278d1fa372a6ee00" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_2127bb5eb0735fc83e356f3e678a22d5.setContent(html_410a2a58b073ae48278d1fa372a6ee00);
+            
+        
+
+        marker_6792a953e88b8c366882f2024730c24d.bindPopup(popup_2127bb5eb0735fc83e356f3e678a22d5)
+        ;
+
+        
+    
+    
+            marker_6792a953e88b8c366882f2024730c24d.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6792a953e88b8c366882f2024730c24d.setIcon(icon_618060f61501f2cadf0709b09c5bf045);
+            
+    
+            var marker_de28366140d59258a9a60d9a556d1294 = L.marker(
+                [7.2906, 80.6337],
+                {
+}
+            ).addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            var icon_20ef65f055615a7f05bca6fc9c6446cc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_863ba882da037fa31041067550a3641f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_18ed59fd4c6bc2750578076641511163 = $(`<div id="html_18ed59fd4c6bc2750578076641511163" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Kandy</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #18:</b> Kandy & Matale<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_863ba882da037fa31041067550a3641f.setContent(html_18ed59fd4c6bc2750578076641511163);
+            
+        
+
+        marker_de28366140d59258a9a60d9a556d1294.bindPopup(popup_863ba882da037fa31041067550a3641f)
+        ;
+
+        
+    
+    
+            marker_de28366140d59258a9a60d9a556d1294.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Kandy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_de28366140d59258a9a60d9a556d1294.setIcon(icon_20ef65f055615a7f05bca6fc9c6446cc);
+            
+    
+            var marker_b98529a25a0002cc14448484dc7c41ba = L.marker(
+                [7.2906, 80.6337],
+                {
+}
+            ).addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            var div_icon_4cf5041e50a1b0fbfcf81fd2cda7b809 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_b98529a25a0002cc14448484dc7c41ba.setIcon(div_icon_4cf5041e50a1b0fbfcf81fd2cda7b809);
+            
+    
+            var marker_d4bc9dc16e00c33e7bedca7420835f17 = L.marker(
+                [7.4678, 80.6244],
+                {
+}
+            ).addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            var icon_70f1970416ac43d10dfb2f7aabc8e9b4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e7605932a5777d402d1a8c4a77c561b4 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_56b4682446387d69d92553bb47781e54 = $(`<div id="html_56b4682446387d69d92553bb47781e54" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Matale</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #18:</b> Kandy & Matale<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_e7605932a5777d402d1a8c4a77c561b4.setContent(html_56b4682446387d69d92553bb47781e54);
+            
+        
+
+        marker_d4bc9dc16e00c33e7bedca7420835f17.bindPopup(popup_e7605932a5777d402d1a8c4a77c561b4)
+        ;
+
+        
+    
+    
+            marker_d4bc9dc16e00c33e7bedca7420835f17.bindTooltip(
+                `<div>
+                     Day 2: RDHS Office Matale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d4bc9dc16e00c33e7bedca7420835f17.setIcon(icon_70f1970416ac43d10dfb2f7aabc8e9b4);
+            
+    
+            var marker_fe856e3792d3df4c7b27d8dfe1b3ed47 = L.marker(
+                [7.4678, 80.6244],
+                {
+}
+            ).addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            var div_icon_7f1fc758aaf2b631fbb4c1cfe3a3a649 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_fe856e3792d3df4c7b27d8dfe1b3ed47.setIcon(div_icon_7f1fc758aaf2b631fbb4c1cfe3a3a649);
+            
+    
+            var poly_line_85f59bf61552c83316af24e4148d55da = L.polyline(
+                [[6.9271, 79.8612], [7.2906, 80.6337], [7.4678, 80.6244], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            poly_line_85f59bf61552c83316af24e4148d55da.bindTooltip(
+                `<div>
+                     Trip #18 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_2916b411b2f743f6185f89dae05dd9b3 = L.polyline.antPath(
+              [[6.9271, 79.8612], [7.2906, 80.6337], [7.4678, 80.6244], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#FF9800",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#FF9800",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_3a5f2871299be5982d4720c953ed8e84);
+        
+    
+            map_3a5f2871299be5982d4720c953ed8e84.fitBounds(
+                [[6.8771, 79.8112], [7.5178, 80.6837]],
+                {}
+            );
+        
+</script>
+</html>

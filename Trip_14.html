@@ -1,0 +1,418 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_f47156231e1126d2b87cb0def07fbe82 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#FF9800">Trip #14 — Southern – Galle & Matara</b><br>
+      <span style="font-size:12px;color:#444">22–23 Jun 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_f47156231e1126d2b87cb0def07fbe82" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_f47156231e1126d2b87cb0def07fbe82 = L.map(
+                "map_f47156231e1126d2b87cb0def07fbe82",
+                {
+                    center: [6.245625, 80.209375],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_75e3ab522d2f61a3d0c0a00d78a3fedf = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_75e3ab522d2f61a3d0c0a00d78a3fedf.addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var marker_4bd8369c4611fcb369ccce16ebb17487 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var icon_3c465542208cf28089d3e36d7deb4e6f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b891a080c1312ae31519697d729d908c = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_72151f05e521eeb6803c222f31b3c41f = $(`<div id="html_72151f05e521eeb6803c222f31b3c41f" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_b891a080c1312ae31519697d729d908c.setContent(html_72151f05e521eeb6803c222f31b3c41f);
+            
+        
+
+        marker_4bd8369c4611fcb369ccce16ebb17487.bindPopup(popup_b891a080c1312ae31519697d729d908c)
+        ;
+
+        
+    
+    
+            marker_4bd8369c4611fcb369ccce16ebb17487.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4bd8369c4611fcb369ccce16ebb17487.setIcon(icon_3c465542208cf28089d3e36d7deb4e6f);
+            
+    
+            var marker_c24f050335188a44224725bf31570aeb = L.marker(
+                [6.0536, 80.22],
+                {
+}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var icon_57b628a80ad08e09d32d1249afde9f6a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_4307ab5c86fa3f5d11b7ffe3203150ec = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e4a1c9cd724fdee5542df9b439e4649d = $(`<div id="html_e4a1c9cd724fdee5542df9b439e4649d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">National Hospital Karapitiya</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_4307ab5c86fa3f5d11b7ffe3203150ec.setContent(html_e4a1c9cd724fdee5542df9b439e4649d);
+            
+        
+
+        marker_c24f050335188a44224725bf31570aeb.bindPopup(popup_4307ab5c86fa3f5d11b7ffe3203150ec)
+        ;
+
+        
+    
+    
+            marker_c24f050335188a44224725bf31570aeb.bindTooltip(
+                `<div>
+                     Day 1: National Hospital Karapitiya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c24f050335188a44224725bf31570aeb.setIcon(icon_57b628a80ad08e09d32d1249afde9f6a);
+            
+    
+            var marker_645f38787f8caf6e5ac2c1687c88f3b7 = L.marker(
+                [6.0536, 80.22],
+                {
+}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var div_icon_9fccb8bc1279ca951dcb11023fcd3a65 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_645f38787f8caf6e5ac2c1687c88f3b7.setIcon(div_icon_9fccb8bc1279ca951dcb11023fcd3a65);
+            
+    
+            var marker_3fb31f4d081dd4b5c9313554478d3115 = L.marker(
+                [6.0535, 80.221],
+                {
+}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var icon_1911d2b77f4f84297b9e3f5581fb7b25 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4c71d35d5cd927726b0387e680fe3af = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f943c72854d8820680a00952e802f372 = $(`<div id="html_f943c72854d8820680a00952e802f372" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Galle</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_a4c71d35d5cd927726b0387e680fe3af.setContent(html_f943c72854d8820680a00952e802f372);
+            
+        
+
+        marker_3fb31f4d081dd4b5c9313554478d3115.bindPopup(popup_a4c71d35d5cd927726b0387e680fe3af)
+        ;
+
+        
+    
+    
+            marker_3fb31f4d081dd4b5c9313554478d3115.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Galle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3fb31f4d081dd4b5c9313554478d3115.setIcon(icon_1911d2b77f4f84297b9e3f5581fb7b25);
+            
+    
+            var marker_233d8a2536d33bcea096657d60b67f5f = L.marker(
+                [6.0535, 80.221],
+                {
+}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var div_icon_e2f96dff1064e60e9b85939e73a58249 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_233d8a2536d33bcea096657d60b67f5f.setIcon(div_icon_e2f96dff1064e60e9b85939e73a58249);
+            
+    
+            var marker_3cbb28fd69240db567b8734698242b6a = L.marker(
+                [5.9483, 80.5353],
+                {
+}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var icon_47b58aecc789ec5ba8faa0634694851f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_a4bbf41e87f6ec17750a1c06c98fe251 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_29aad0d9b4ae0b29640294255ebf9662 = $(`<div id="html_29aad0d9b4ae0b29640294255ebf9662" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Matara</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #14:</b> Southern – Galle & Matara<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_a4bbf41e87f6ec17750a1c06c98fe251.setContent(html_29aad0d9b4ae0b29640294255ebf9662);
+            
+        
+
+        marker_3cbb28fd69240db567b8734698242b6a.bindPopup(popup_a4bbf41e87f6ec17750a1c06c98fe251)
+        ;
+
+        
+    
+    
+            marker_3cbb28fd69240db567b8734698242b6a.bindTooltip(
+                `<div>
+                     Day 2: RDHS Office Matara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3cbb28fd69240db567b8734698242b6a.setIcon(icon_47b58aecc789ec5ba8faa0634694851f);
+            
+    
+            var marker_ba27d74c8dd3d97c74780dc7d445d2fc = L.marker(
+                [5.9483, 80.5353],
+                {
+}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            var div_icon_ef7533ddfd4d9630162055c8abc3ef7a = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_ba27d74c8dd3d97c74780dc7d445d2fc.setIcon(div_icon_ef7533ddfd4d9630162055c8abc3ef7a);
+            
+    
+            var poly_line_15491bb697e91486d2eba0322db4a68c = L.polyline(
+                [[6.9271, 79.8612], [6.0536, 80.22], [6.0535, 80.221], [5.9483, 80.5353], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            poly_line_15491bb697e91486d2eba0322db4a68c.bindTooltip(
+                `<div>
+                     Trip #14 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_a7b5ba45277c455ca44e61892812fc6e = L.polyline.antPath(
+              [[6.9271, 79.8612], [6.0536, 80.22], [6.0535, 80.221], [5.9483, 80.5353], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#FF9800",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#FF9800",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_f47156231e1126d2b87cb0def07fbe82);
+        
+    
+            map_f47156231e1126d2b87cb0def07fbe82.fitBounds(
+                [[5.8983, 79.8112], [6.9771, 80.5853]],
+                {}
+            );
+        
+</script>
+</html>

@@ -1,0 +1,550 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_32dfd310209ae273b781a725362f0945 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #F44336;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#F44336">Trip #26 — Northern Sweep – Medawachchiya to Jaffna</b><br>
+      <span style="font-size:12px;color:#444">05–08 Oct 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div><div><span style="color:#6A1B9A">⬤</span> <b>Day 3</b></div><div><span style="color:#B71C1C">⬤</span> <b>Day 4</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_32dfd310209ae273b781a725362f0945" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_32dfd310209ae273b781a725362f0945 = L.map(
+                "map_32dfd310209ae273b781a725362f0945",
+                {
+                    center: [8.75185, 80.34911666666666],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_25d25889cb3420af6438259713592102 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_25d25889cb3420af6438259713592102.addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var marker_fa593846326601264227ff1a3d273b1b = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var icon_36bcaa4085a2632e3ce2ef8a25af83ba = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_86f25c1c9fb01c80ff1c307a5c98a883 = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_296338c0738af3c27a2c49cc19530c94 = $(`<div id="html_296338c0738af3c27a2c49cc19530c94" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_86f25c1c9fb01c80ff1c307a5c98a883.setContent(html_296338c0738af3c27a2c49cc19530c94);
+            
+        
+
+        marker_fa593846326601264227ff1a3d273b1b.bindPopup(popup_86f25c1c9fb01c80ff1c307a5c98a883)
+        ;
+
+        
+    
+    
+            marker_fa593846326601264227ff1a3d273b1b.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fa593846326601264227ff1a3d273b1b.setIcon(icon_36bcaa4085a2632e3ce2ef8a25af83ba);
+            
+    
+            var marker_71d66f88d192ed707301b425e4718695 = L.marker(
+                [8.5083, 80.495],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var icon_d6ce91a2ef7cdaba092cdcc8004a687c = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23d1b62cba2538fbd69d4244e88134c7 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_09a37032963ee644d2d36470abdb3895 = $(`<div id="html_09a37032963ee644d2d36470abdb3895" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Medawachchiya</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #26:</b> Northern Sweep – Medawachchiya to Jaffna<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_23d1b62cba2538fbd69d4244e88134c7.setContent(html_09a37032963ee644d2d36470abdb3895);
+            
+        
+
+        marker_71d66f88d192ed707301b425e4718695.bindPopup(popup_23d1b62cba2538fbd69d4244e88134c7)
+        ;
+
+        
+    
+    
+            marker_71d66f88d192ed707301b425e4718695.bindTooltip(
+                `<div>
+                     Day 1: Base Hospital Medawachchiya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_71d66f88d192ed707301b425e4718695.setIcon(icon_d6ce91a2ef7cdaba092cdcc8004a687c);
+            
+    
+            var marker_b87ba8c70469f38cfb2c602a7b1501b4 = L.marker(
+                [8.5083, 80.495],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var div_icon_fe54ec39a049071a2895a1d56161624b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_b87ba8c70469f38cfb2c602a7b1501b4.setIcon(div_icon_fe54ec39a049071a2895a1d56161624b);
+            
+    
+            var marker_ccd7234260d531ef5398c8f7bebf4bfc = L.marker(
+                [8.7514, 80.4972],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var icon_17b384feed46ea460a06f6791c88ac77 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_23a1d54c5c58d47c02f1b3ac2f849a4f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_2a1f7705d9abbb4b561cf4477e9f5992 = $(`<div id="html_2a1f7705d9abbb4b561cf4477e9f5992" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Vavuniya</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #26:</b> Northern Sweep – Medawachchiya to Jaffna<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_23a1d54c5c58d47c02f1b3ac2f849a4f.setContent(html_2a1f7705d9abbb4b561cf4477e9f5992);
+            
+        
+
+        marker_ccd7234260d531ef5398c8f7bebf4bfc.bindPopup(popup_23a1d54c5c58d47c02f1b3ac2f849a4f)
+        ;
+
+        
+    
+    
+            marker_ccd7234260d531ef5398c8f7bebf4bfc.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Vavuniya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ccd7234260d531ef5398c8f7bebf4bfc.setIcon(icon_17b384feed46ea460a06f6791c88ac77);
+            
+    
+            var marker_5a9fe1f074a3b681b1a1b33c8e48c57a = L.marker(
+                [8.7514, 80.4972],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var div_icon_6a60cb1d870e8e24249f4d4116897e65 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_5a9fe1f074a3b681b1a1b33c8e48c57a.setIcon(div_icon_6a60cb1d870e8e24249f4d4116897e65);
+            
+    
+            var marker_d71105f4add753a58144c4ea4a1c57f0 = L.marker(
+                [9.3956, 80.4022],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var icon_7cea560790c6cee315270fc35fab3cf5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1f4bbfe8f0b8e61470c6c5cb92595d44 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_15d4024131d0ac8639c6c80b8c7ea442 = $(`<div id="html_15d4024131d0ac8639c6c80b8c7ea442" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Kilinochchi</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #26:</b> Northern Sweep – Medawachchiya to Jaffna<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_1f4bbfe8f0b8e61470c6c5cb92595d44.setContent(html_15d4024131d0ac8639c6c80b8c7ea442);
+            
+        
+
+        marker_d71105f4add753a58144c4ea4a1c57f0.bindPopup(popup_1f4bbfe8f0b8e61470c6c5cb92595d44)
+        ;
+
+        
+    
+    
+            marker_d71105f4add753a58144c4ea4a1c57f0.bindTooltip(
+                `<div>
+                     Day 2: RDHS Office Kilinochchi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_d71105f4add753a58144c4ea4a1c57f0.setIcon(icon_7cea560790c6cee315270fc35fab3cf5);
+            
+    
+            var marker_d9005dad592b17cbd7e1419996b0b2c9 = L.marker(
+                [9.3956, 80.4022],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var div_icon_b2c0000bc899fc2dc7f89c8ce9ca2c91 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_d9005dad592b17cbd7e1419996b0b2c9.setIcon(div_icon_b2c0000bc899fc2dc7f89c8ce9ca2c91);
+            
+    
+            var marker_18a358481d286e3ca512cec695da612f = L.marker(
+                [9.2672, 80.8136],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var icon_a3dc40779af76d1db691170e6bff8279 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2bf13959ae44fbf67ac3653f8a1983ce = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_1c095fa146ded7d92d9b0a7336bb95ce = $(`<div id="html_1c095fa146ded7d92d9b0a7336bb95ce" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Mullaitivu</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #26:</b> Northern Sweep – Medawachchiya to Jaffna<br>       <b>Day 3</b>     </div></div>`)[0];
+                popup_2bf13959ae44fbf67ac3653f8a1983ce.setContent(html_1c095fa146ded7d92d9b0a7336bb95ce);
+            
+        
+
+        marker_18a358481d286e3ca512cec695da612f.bindPopup(popup_2bf13959ae44fbf67ac3653f8a1983ce)
+        ;
+
+        
+    
+    
+            marker_18a358481d286e3ca512cec695da612f.bindTooltip(
+                `<div>
+                     Day 3: RDHS Office Mullaitivu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_18a358481d286e3ca512cec695da612f.setIcon(icon_a3dc40779af76d1db691170e6bff8279);
+            
+    
+            var marker_f9494e68d33e05a12b103afb49871fdf = L.marker(
+                [9.2672, 80.8136],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var div_icon_a81466b99802b6d316bf40cb8d242a61 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#6A1B9A;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD3\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_f9494e68d33e05a12b103afb49871fdf.setIcon(div_icon_a81466b99802b6d316bf40cb8d242a61);
+            
+    
+            var marker_f785e42529358355ca7d5fb91c82ff30 = L.marker(
+                [9.6615, 80.0255],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var icon_5da732311c147c7c2768ba61daa8ae45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fbe75806de55289952072db6f767fa33 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c99b2ded9234f5a8879e264f9c7108e7 = $(`<div id="html_c99b2ded9234f5a8879e264f9c7108e7" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Jaffna</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #26:</b> Northern Sweep – Medawachchiya to Jaffna<br>       <b>Day 4</b>     </div></div>`)[0];
+                popup_fbe75806de55289952072db6f767fa33.setContent(html_c99b2ded9234f5a8879e264f9c7108e7);
+            
+        
+
+        marker_f785e42529358355ca7d5fb91c82ff30.bindPopup(popup_fbe75806de55289952072db6f767fa33)
+        ;
+
+        
+    
+    
+            marker_f785e42529358355ca7d5fb91c82ff30.bindTooltip(
+                `<div>
+                     Day 4: RDHS Office Jaffna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_f785e42529358355ca7d5fb91c82ff30.setIcon(icon_5da732311c147c7c2768ba61daa8ae45);
+            
+    
+            var marker_25ce452a325c122a8ff0d169dbec95e3 = L.marker(
+                [9.6615, 80.0255],
+                {
+}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            var div_icon_8ea6ee9c9fcecc95017b4f34b5665be6 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#B71C1C;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD4\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_25ce452a325c122a8ff0d169dbec95e3.setIcon(div_icon_8ea6ee9c9fcecc95017b4f34b5665be6);
+            
+    
+            var poly_line_a01652b20f36fe60cf4e086375e08bf3 = L.polyline(
+                [[6.9271, 79.8612], [8.5083, 80.495], [8.7514, 80.4972], [9.3956, 80.4022], [9.2672, 80.8136], [9.6615, 80.0255], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#F44336", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F44336", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            poly_line_a01652b20f36fe60cf4e086375e08bf3.bindTooltip(
+                `<div>
+                     Trip #26 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_baefb2e129596ca4b0585911858ccad8 = L.polyline.antPath(
+              [[6.9271, 79.8612], [8.5083, 80.495], [8.7514, 80.4972], [9.3956, 80.4022], [9.2672, 80.8136], [9.6615, 80.0255], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#F44336",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#F44336",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_32dfd310209ae273b781a725362f0945);
+        
+    
+            map_32dfd310209ae273b781a725362f0945.fitBounds(
+                [[6.8771, 79.8112], [9.711500000000001, 80.86359999999999]],
+                {}
+            );
+        
+</script>
+</html>

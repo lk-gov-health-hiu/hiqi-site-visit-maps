@@ -1,0 +1,3290 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_06ace752d6e32eb570745546b8e14c2b {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #333;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:16px">HiQi Project – All 27 Trips Overview</b><br>
+      <span style="font-size:12px;color:#444">June – October 2026 | 56 Institutions</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:12px">
+      <b>Trip type</b><br>
+      <span style="color:#2196F3">⬤</span> 1-day (close)<br>
+      <span style="color:#FF9800">⬤</span> 2-day outstation<br>
+      <span style="color:#9C27B0">⬤</span> 3-day outstation<br>
+      <span style="color:#F44336">⬤</span> 4-day outstation<br>
+      <hr style="margin:4px 0">
+      <span style="color:#E53935">★</span> Colombo Base<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office
+    </div>
+    
+            <div class="folium-map" id="map_06ace752d6e32eb570745546b8e14c2b" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_06ace752d6e32eb570745546b8e14c2b = L.map(
+                "map_06ace752d6e32eb570745546b8e14c2b",
+                {
+                    center: [7.8731, 80.7718],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_22c893f415d3ffc23a80f4c0ecbb3627 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_22c893f415d3ffc23a80f4c0ecbb3627.addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var marker_5b04efc35b0bccf927fdf22e3193a9d1 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_3c3dbf6610b724bc30df0d74ac6c4f90 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_246f20acc404654a45259da53d457d13 = L.popup({
+  "maxWidth": 180,
+});
+
+        
+            
+                var html_1c8d3ac92774bdf7c84e2a6808070b7c = $(`<div id="html_1c8d3ac92774bdf7c84e2a6808070b7c" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b></div>`)[0];
+                popup_246f20acc404654a45259da53d457d13.setContent(html_1c8d3ac92774bdf7c84e2a6808070b7c);
+            
+        
+
+        marker_5b04efc35b0bccf927fdf22e3193a9d1.bindPopup(popup_246f20acc404654a45259da53d457d13)
+        ;
+
+        
+    
+    
+            marker_5b04efc35b0bccf927fdf22e3193a9d1.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5b04efc35b0bccf927fdf22e3193a9d1.setIcon(icon_3c3dbf6610b724bc30df0d74ac6c4f90);
+            
+    
+            var marker_cfcb34e9bf0be15b7dfa9c9df966524d = L.marker(
+                [6.9147, 79.8742],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_e8d22a5fd5dc476395417ff8d63de1b3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1e9846308020eed9b20a795aef8992d7 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4df7ad562bc238202827318c23e5f572 = $(`<div id="html_4df7ad562bc238202827318c23e5f572" style="width: 100.0%; height: 100.0%;"><b>De Zoysa Hospital for Women</b><br>Trip #1: Colombo – De Zoysa & RDHS Colombo<br>01 Jun 2026 (Mon)</div>`)[0];
+                popup_1e9846308020eed9b20a795aef8992d7.setContent(html_4df7ad562bc238202827318c23e5f572);
+            
+        
+
+        marker_cfcb34e9bf0be15b7dfa9c9df966524d.bindPopup(popup_1e9846308020eed9b20a795aef8992d7)
+        ;
+
+        
+    
+    
+            marker_cfcb34e9bf0be15b7dfa9c9df966524d.bindTooltip(
+                `<div>
+                     De Zoysa Hospital for Women
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cfcb34e9bf0be15b7dfa9c9df966524d.setIcon(icon_e8d22a5fd5dc476395417ff8d63de1b3);
+            
+    
+            var marker_5e43a7aed5a77d62d93fca5d02997e21 = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_91179d1b04a011f2be62604ba54b7999 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e1d5e68ddb421e6125a411485314bc1f = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_91e0553f26704d1e372874a278442302 = $(`<div id="html_91e0553f26704d1e372874a278442302" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Colombo</b><br>Trip #1: Colombo – De Zoysa & RDHS Colombo<br>01 Jun 2026 (Mon)</div>`)[0];
+                popup_e1d5e68ddb421e6125a411485314bc1f.setContent(html_91e0553f26704d1e372874a278442302);
+            
+        
+
+        marker_5e43a7aed5a77d62d93fca5d02997e21.bindPopup(popup_e1d5e68ddb421e6125a411485314bc1f)
+        ;
+
+        
+    
+    
+            marker_5e43a7aed5a77d62d93fca5d02997e21.bindTooltip(
+                `<div>
+                     RDHS Office Colombo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5e43a7aed5a77d62d93fca5d02997e21.setIcon(icon_91179d1b04a011f2be62604ba54b7999);
+            
+    
+            var poly_line_02861fc6f6699fa0b4bc8a5729d37559 = L.polyline(
+                [[6.9271, 79.8612], [6.9147, 79.8742], [6.9271, 79.8612], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_02861fc6f6699fa0b4bc8a5729d37559.bindTooltip(
+                `<div>
+                     Trip #1: Colombo – De Zoysa & RDHS Colombo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e3f69e28d5a7f0da65294e3b19c67b2c = L.marker(
+                [6.8649, 79.8728],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_c7e542c444c974e4d1dad04d7e3a3554 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea22cc3ad1b2abcb441272560ff94aa1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_00f51440796f8d605c5bc82cb65fd728 = $(`<div id="html_00f51440796f8d605c5bc82cb65fd728" style="width: 100.0%; height: 100.0%;"><b>Colombo South Teaching Hospital</b><br>Trip #2: Colombo South Teaching Hospital<br>02 Jun 2026 (Tue)</div>`)[0];
+                popup_ea22cc3ad1b2abcb441272560ff94aa1.setContent(html_00f51440796f8d605c5bc82cb65fd728);
+            
+        
+
+        marker_e3f69e28d5a7f0da65294e3b19c67b2c.bindPopup(popup_ea22cc3ad1b2abcb441272560ff94aa1)
+        ;
+
+        
+    
+    
+            marker_e3f69e28d5a7f0da65294e3b19c67b2c.bindTooltip(
+                `<div>
+                     Colombo South Teaching Hospital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e3f69e28d5a7f0da65294e3b19c67b2c.setIcon(icon_c7e542c444c974e4d1dad04d7e3a3554);
+            
+    
+            var poly_line_455e5a5aae07333aff26a93bb70140e3 = L.polyline(
+                [[6.9271, 79.8612], [6.8649, 79.8728], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_455e5a5aae07333aff26a93bb70140e3.bindTooltip(
+                `<div>
+                     Trip #2: Colombo South Teaching Hospital
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_fcf71288b5b3e5c9149f467ccfa5d8af = L.marker(
+                [6.9436, 79.9108],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_064f89fdcaaba6c2e7df8c38aca1c994 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9512e1c3218eb756997bfe9fd65667e9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0017f39dab6fbdbcbeddaa2c01a9d740 = $(`<div id="html_0017f39dab6fbdbcbeddaa2c01a9d740" style="width: 100.0%; height: 100.0%;"><b>National Institute of Mental Health</b><br>Trip #3: National Institute of Mental Health<br>03 Jun 2026 (Wed)</div>`)[0];
+                popup_9512e1c3218eb756997bfe9fd65667e9.setContent(html_0017f39dab6fbdbcbeddaa2c01a9d740);
+            
+        
+
+        marker_fcf71288b5b3e5c9149f467ccfa5d8af.bindPopup(popup_9512e1c3218eb756997bfe9fd65667e9)
+        ;
+
+        
+    
+    
+            marker_fcf71288b5b3e5c9149f467ccfa5d8af.bindTooltip(
+                `<div>
+                     National Institute of Mental Health
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_fcf71288b5b3e5c9149f467ccfa5d8af.setIcon(icon_064f89fdcaaba6c2e7df8c38aca1c994);
+            
+    
+            var poly_line_e525f05925661713c2b32e608af54586 = L.polyline(
+                [[6.9271, 79.8612], [6.9436, 79.9108], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_e525f05925661713c2b32e608af54586.bindTooltip(
+                `<div>
+                     Trip #3: National Institute of Mental Health
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_a469bbf53696e8fa5bec086895709822 = L.marker(
+                [7.0285, 79.921],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_17e0ab5030bf65c70c95378db8975f1e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e88097d5f147b653ebabaf0878148c82 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_720ba1f09b3bae15a7bfc6a8d9a7a9cf = $(`<div id="html_720ba1f09b3bae15a7bfc6a8d9a7a9cf" style="width: 100.0%; height: 100.0%;"><b>Rehabilitation Hospital Ragama</b><br>Trip #4: Ragama & Welisara<br>04 Jun 2026 (Thu)</div>`)[0];
+                popup_e88097d5f147b653ebabaf0878148c82.setContent(html_720ba1f09b3bae15a7bfc6a8d9a7a9cf);
+            
+        
+
+        marker_a469bbf53696e8fa5bec086895709822.bindPopup(popup_e88097d5f147b653ebabaf0878148c82)
+        ;
+
+        
+    
+    
+            marker_a469bbf53696e8fa5bec086895709822.bindTooltip(
+                `<div>
+                     Rehabilitation Hospital Ragama
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a469bbf53696e8fa5bec086895709822.setIcon(icon_17e0ab5030bf65c70c95378db8975f1e);
+            
+    
+            var marker_c14306b402070112702bd36717478110 = L.marker(
+                [7.026, 79.907],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_9de604a1ab2acc69ee5053891eea5686 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8b14f3c68ca123e71d400a965bc2c4e0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c77cdf536d7b670532a2745fa7884b30 = $(`<div id="html_c77cdf536d7b670532a2745fa7884b30" style="width: 100.0%; height: 100.0%;"><b>National Hospital for Respiratory Diseases Welisara</b><br>Trip #4: Ragama & Welisara<br>04 Jun 2026 (Thu)</div>`)[0];
+                popup_8b14f3c68ca123e71d400a965bc2c4e0.setContent(html_c77cdf536d7b670532a2745fa7884b30);
+            
+        
+
+        marker_c14306b402070112702bd36717478110.bindPopup(popup_8b14f3c68ca123e71d400a965bc2c4e0)
+        ;
+
+        
+    
+    
+            marker_c14306b402070112702bd36717478110.bindTooltip(
+                `<div>
+                     National Hospital for Respiratory Diseases Welisara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c14306b402070112702bd36717478110.setIcon(icon_9de604a1ab2acc69ee5053891eea5686);
+            
+    
+            var poly_line_34cc81c1a7970048109c6ca72159b7ec = L.polyline(
+                [[6.9271, 79.8612], [7.0285, 79.921], [7.026, 79.907], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_34cc81c1a7970048109c6ca72159b7ec.bindTooltip(
+                `<div>
+                     Trip #4: Ragama & Welisara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e84cce35906af1fe6309484201967be1 = L.marker(
+                [6.8478, 80.002],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_c54eed96ff2c9b5598c5249e202c4c5b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8e0bde3a7dbc45f48ae1f62307faefb0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5396a7ddaf74299b8d859096d9b82e51 = $(`<div id="html_5396a7ddaf74299b8d859096d9b82e51" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Homagama</b><br>Trip #5: Base Hospital Homagama<br>05 Jun 2026 (Fri)</div>`)[0];
+                popup_8e0bde3a7dbc45f48ae1f62307faefb0.setContent(html_5396a7ddaf74299b8d859096d9b82e51);
+            
+        
+
+        marker_e84cce35906af1fe6309484201967be1.bindPopup(popup_8e0bde3a7dbc45f48ae1f62307faefb0)
+        ;
+
+        
+    
+    
+            marker_e84cce35906af1fe6309484201967be1.bindTooltip(
+                `<div>
+                     Base Hospital Homagama
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e84cce35906af1fe6309484201967be1.setIcon(icon_c54eed96ff2c9b5598c5249e202c4c5b);
+            
+    
+            var poly_line_878d2cb269a6acaa9ed9ffb9f0c19bd5 = L.polyline(
+                [[6.9271, 79.8612], [6.8478, 80.002], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_878d2cb269a6acaa9ed9ffb9f0c19bd5.bindTooltip(
+                `<div>
+                     Trip #5: Base Hospital Homagama
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e94444f7507258c1908304201fb07fb3 = L.marker(
+                [7.2095, 79.838],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_37590304b5e105972d4df074bc9be564 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_af4246f537341a7a08bb7976bb2ad8ef = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6bf96e258721d38fa3b4d9d7a76f0b0f = $(`<div id="html_6bf96e258721d38fa3b4d9d7a76f0b0f" style="width: 100.0%; height: 100.0%;"><b>District General Hospital Negombo</b><br>Trip #6: DGH Negombo<br>08 Jun 2026 (Mon)</div>`)[0];
+                popup_af4246f537341a7a08bb7976bb2ad8ef.setContent(html_6bf96e258721d38fa3b4d9d7a76f0b0f);
+            
+        
+
+        marker_e94444f7507258c1908304201fb07fb3.bindPopup(popup_af4246f537341a7a08bb7976bb2ad8ef)
+        ;
+
+        
+    
+    
+            marker_e94444f7507258c1908304201fb07fb3.bindTooltip(
+                `<div>
+                     District General Hospital Negombo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e94444f7507258c1908304201fb07fb3.setIcon(icon_37590304b5e105972d4df074bc9be564);
+            
+    
+            var poly_line_f6a81771602703ecd49aa552a2939821 = L.polyline(
+                [[6.9271, 79.8612], [7.2095, 79.838], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_f6a81771602703ecd49aa552a2939821.bindTooltip(
+                `<div>
+                     Trip #6: DGH Negombo
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_44e924360ad909edce882b1d56962456 = L.marker(
+                [6.7164, 80.0612],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_851709bbb549076d9d5780fe34f17e0a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_192c89f63dcf0e40f1a978ab8c862565 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_56eae1d2c4d0d83f43295673003f0d2e = $(`<div id="html_56eae1d2c4d0d83f43295673003f0d2e" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Horana</b><br>Trip #7: Base Hospital Horana<br>09 Jun 2026 (Tue)</div>`)[0];
+                popup_192c89f63dcf0e40f1a978ab8c862565.setContent(html_56eae1d2c4d0d83f43295673003f0d2e);
+            
+        
+
+        marker_44e924360ad909edce882b1d56962456.bindPopup(popup_192c89f63dcf0e40f1a978ab8c862565)
+        ;
+
+        
+    
+    
+            marker_44e924360ad909edce882b1d56962456.bindTooltip(
+                `<div>
+                     Base Hospital Horana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_44e924360ad909edce882b1d56962456.setIcon(icon_851709bbb549076d9d5780fe34f17e0a);
+            
+    
+            var poly_line_b320b214162e1244ee93209f3aafb4ef = L.polyline(
+                [[6.9271, 79.8612], [6.7164, 80.0612], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_b320b214162e1244ee93209f3aafb4ef.bindTooltip(
+                `<div>
+                     Trip #7: Base Hospital Horana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_3cd6c95e2e94fa857ee332b2daafa84c = L.marker(
+                [6.9919, 80.3436],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_803df6112535f92c76eb86087f00ed89 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9fb667c1aad106101f785b6930d40935 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d3fbafe2eb01e619da3ab07da1fbed1e = $(`<div id="html_d3fbafe2eb01e619da3ab07da1fbed1e" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Karawanella</b><br>Trip #8: Base Hospital Karawanella<br>10 Jun 2026 (Wed)</div>`)[0];
+                popup_9fb667c1aad106101f785b6930d40935.setContent(html_d3fbafe2eb01e619da3ab07da1fbed1e);
+            
+        
+
+        marker_3cd6c95e2e94fa857ee332b2daafa84c.bindPopup(popup_9fb667c1aad106101f785b6930d40935)
+        ;
+
+        
+    
+    
+            marker_3cd6c95e2e94fa857ee332b2daafa84c.bindTooltip(
+                `<div>
+                     Base Hospital Karawanella
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3cd6c95e2e94fa857ee332b2daafa84c.setIcon(icon_803df6112535f92c76eb86087f00ed89);
+            
+    
+            var poly_line_15c9b9dae5aa5d29b594c1459fe212d4 = L.polyline(
+                [[6.9271, 79.8612], [6.9919, 80.3436], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_15c9b9dae5aa5d29b594c1459fe212d4.bindTooltip(
+                `<div>
+                     Trip #8: Base Hospital Karawanella
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b4dfee5a8bc2f748725c9cdfb9e312b2 = L.marker(
+                [7.2917, 80.0686],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_7e38ce28827d7351087bcec17a6771f4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f6c9ca75294b3e37de25d57e798d4665 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_1647c18c93b202409d8cb88f65f653c4 = $(`<div id="html_1647c18c93b202409d8cb88f65f653c4" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Dambadeniya</b><br>Trip #9: Base Hospital Dambadeniya<br>11 Jun 2026 (Thu)</div>`)[0];
+                popup_f6c9ca75294b3e37de25d57e798d4665.setContent(html_1647c18c93b202409d8cb88f65f653c4);
+            
+        
+
+        marker_b4dfee5a8bc2f748725c9cdfb9e312b2.bindPopup(popup_f6c9ca75294b3e37de25d57e798d4665)
+        ;
+
+        
+    
+    
+            marker_b4dfee5a8bc2f748725c9cdfb9e312b2.bindTooltip(
+                `<div>
+                     Base Hospital Dambadeniya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b4dfee5a8bc2f748725c9cdfb9e312b2.setIcon(icon_7e38ce28827d7351087bcec17a6771f4);
+            
+    
+            var poly_line_6f9082ac5da4512fa83c6f6795e8d9ce = L.polyline(
+                [[6.9271, 79.8612], [7.2917, 80.0686], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_6f9082ac5da4512fa83c6f6795e8d9ce.bindTooltip(
+                `<div>
+                     Trip #9: Base Hospital Dambadeniya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b6568ffa35f8617675095995769d0193 = L.marker(
+                [7.2513, 80.3464],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_422b4436adc3bdf5057e404e2f588de3 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ad7cad564d3b6a8a5f0b590f8dab1199 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fdfb69c011bb8c59e427ff34b7b9313e = $(`<div id="html_fdfb69c011bb8c59e427ff34b7b9313e" style="width: 100.0%; height: 100.0%;"><b>District General Hospital Kegalle</b><br>Trip #10: DGH Kegalle & RDHS Kegalle<br>12 Jun 2026 (Fri)</div>`)[0];
+                popup_ad7cad564d3b6a8a5f0b590f8dab1199.setContent(html_fdfb69c011bb8c59e427ff34b7b9313e);
+            
+        
+
+        marker_b6568ffa35f8617675095995769d0193.bindPopup(popup_ad7cad564d3b6a8a5f0b590f8dab1199)
+        ;
+
+        
+    
+    
+            marker_b6568ffa35f8617675095995769d0193.bindTooltip(
+                `<div>
+                     District General Hospital Kegalle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b6568ffa35f8617675095995769d0193.setIcon(icon_422b4436adc3bdf5057e404e2f588de3);
+            
+    
+            var marker_ed22c0891b234c3481f7f85cd1a38d5d = L.marker(
+                [7.2514, 80.3467],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_0b959e4c6053276f4c7835efbf93aa45 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_28ec931a89b4b0a036cf1831c510521d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9760359304e796910347273da55bf35a = $(`<div id="html_9760359304e796910347273da55bf35a" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Kegalle</b><br>Trip #10: DGH Kegalle & RDHS Kegalle<br>12 Jun 2026 (Fri)</div>`)[0];
+                popup_28ec931a89b4b0a036cf1831c510521d.setContent(html_9760359304e796910347273da55bf35a);
+            
+        
+
+        marker_ed22c0891b234c3481f7f85cd1a38d5d.bindPopup(popup_28ec931a89b4b0a036cf1831c510521d)
+        ;
+
+        
+    
+    
+            marker_ed22c0891b234c3481f7f85cd1a38d5d.bindTooltip(
+                `<div>
+                     RDHS Office Kegalle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_ed22c0891b234c3481f7f85cd1a38d5d.setIcon(icon_0b959e4c6053276f4c7835efbf93aa45);
+            
+    
+            var poly_line_96c539abe15207460173ab91f9ebd2e1 = L.polyline(
+                [[6.9271, 79.8612], [7.2513, 80.3464], [7.2514, 80.3467], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_96c539abe15207460173ab91f9ebd2e1.bindTooltip(
+                `<div>
+                     Trip #10: DGH Kegalle & RDHS Kegalle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_cb14ac72ad23ec289e9d14b87c6ac39e = L.marker(
+                [7.0833, 79.9997],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_c0a801e55e73bc63686256b4f1f69a8b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2d310b516196c9d30ed83b662545134b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d1834206b42143ae66543891764f4b25 = $(`<div id="html_d1834206b42143ae66543891764f4b25" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Gampaha</b><br>Trip #11: RDHS Gampaha<br>15 Jun 2026 (Mon)</div>`)[0];
+                popup_2d310b516196c9d30ed83b662545134b.setContent(html_d1834206b42143ae66543891764f4b25);
+            
+        
+
+        marker_cb14ac72ad23ec289e9d14b87c6ac39e.bindPopup(popup_2d310b516196c9d30ed83b662545134b)
+        ;
+
+        
+    
+    
+            marker_cb14ac72ad23ec289e9d14b87c6ac39e.bindTooltip(
+                `<div>
+                     RDHS Office Gampaha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_cb14ac72ad23ec289e9d14b87c6ac39e.setIcon(icon_c0a801e55e73bc63686256b4f1f69a8b);
+            
+    
+            var poly_line_1394f6a8e87021a82735a53d9063165b = L.polyline(
+                [[6.9271, 79.8612], [7.0833, 79.9997], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_1394f6a8e87021a82735a53d9063165b.bindTooltip(
+                `<div>
+                     Trip #11: RDHS Gampaha
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b414fdfff90903dc26670f17f793a2aa = L.marker(
+                [7.4833, 80.3625],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_24778497089a24a11de2bb10f94193a4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_fffa94c5ab6b5779ba4aaa276065c115 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ceb918705ae70c78fa3ed9840b4546db = $(`<div id="html_ceb918705ae70c78fa3ed9840b4546db" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Kurunegala</b><br>Trip #12: RDHS Kurunegala<br>16 Jun 2026 (Tue)</div>`)[0];
+                popup_fffa94c5ab6b5779ba4aaa276065c115.setContent(html_ceb918705ae70c78fa3ed9840b4546db);
+            
+        
+
+        marker_b414fdfff90903dc26670f17f793a2aa.bindPopup(popup_fffa94c5ab6b5779ba4aaa276065c115)
+        ;
+
+        
+    
+    
+            marker_b414fdfff90903dc26670f17f793a2aa.bindTooltip(
+                `<div>
+                     RDHS Office Kurunegala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b414fdfff90903dc26670f17f793a2aa.setIcon(icon_24778497089a24a11de2bb10f94193a4);
+            
+    
+            var poly_line_bd59ac3ad982dce872800e97a3125c7d = L.polyline(
+                [[6.9271, 79.8612], [7.4833, 80.3625], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_bd59ac3ad982dce872800e97a3125c7d.bindTooltip(
+                `<div>
+                     Trip #12: RDHS Kurunegala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_5858a429234627bf457eb5cb197c7e4b = L.marker(
+                [6.5854, 79.9607],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_6cad56c4090d1cd2b2f512a7fb628db1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_46befb240557f21cc2e34c1817a1b177 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_9fa1f03cdabd33f1f3527b96d2a68b8c = $(`<div id="html_9fa1f03cdabd33f1f3527b96d2a68b8c" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Kalutara</b><br>Trip #13: RDHS Kalutara & RDHS Ratnapura<br>17 Jun 2026 (Wed)</div>`)[0];
+                popup_46befb240557f21cc2e34c1817a1b177.setContent(html_9fa1f03cdabd33f1f3527b96d2a68b8c);
+            
+        
+
+        marker_5858a429234627bf457eb5cb197c7e4b.bindPopup(popup_46befb240557f21cc2e34c1817a1b177)
+        ;
+
+        
+    
+    
+            marker_5858a429234627bf457eb5cb197c7e4b.bindTooltip(
+                `<div>
+                     RDHS Office Kalutara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5858a429234627bf457eb5cb197c7e4b.setIcon(icon_6cad56c4090d1cd2b2f512a7fb628db1);
+            
+    
+            var marker_a8eab81e4e8e2def9e689453d25d06ba = L.marker(
+                [6.6828, 80.4003],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_e9b667b6af8c8c0380780dad264a61e7 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_94349f8ab16ecce54cc2ad0dbb8d09fe = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_c23ac8a9d9bf09875f6b82d80f556f4f = $(`<div id="html_c23ac8a9d9bf09875f6b82d80f556f4f" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Ratnapura</b><br>Trip #13: RDHS Kalutara & RDHS Ratnapura<br>17 Jun 2026 (Wed)</div>`)[0];
+                popup_94349f8ab16ecce54cc2ad0dbb8d09fe.setContent(html_c23ac8a9d9bf09875f6b82d80f556f4f);
+            
+        
+
+        marker_a8eab81e4e8e2def9e689453d25d06ba.bindPopup(popup_94349f8ab16ecce54cc2ad0dbb8d09fe)
+        ;
+
+        
+    
+    
+            marker_a8eab81e4e8e2def9e689453d25d06ba.bindTooltip(
+                `<div>
+                     RDHS Office Ratnapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a8eab81e4e8e2def9e689453d25d06ba.setIcon(icon_e9b667b6af8c8c0380780dad264a61e7);
+            
+    
+            var poly_line_8b02d8376f5fb3de6c20951eca832902 = L.polyline(
+                [[6.9271, 79.8612], [6.5854, 79.9607], [6.6828, 80.4003], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_8b02d8376f5fb3de6c20951eca832902.bindTooltip(
+                `<div>
+                     Trip #13: RDHS Kalutara & RDHS Ratnapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_addd08e1b23cde4de63f46c36703ddcc = L.marker(
+                [6.0536, 80.22],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_6c89f2d1272b5f2719267913102563dc = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_e5d0329fa3575f5de14a3f49bde45c22 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2f9c370a40674b55af5aa4d66ed57be2 = $(`<div id="html_2f9c370a40674b55af5aa4d66ed57be2" style="width: 100.0%; height: 100.0%;"><b>National Hospital Karapitiya</b><br>Trip #14: Southern – Galle & Matara<br>22–23 Jun 2026</div>`)[0];
+                popup_e5d0329fa3575f5de14a3f49bde45c22.setContent(html_2f9c370a40674b55af5aa4d66ed57be2);
+            
+        
+
+        marker_addd08e1b23cde4de63f46c36703ddcc.bindPopup(popup_e5d0329fa3575f5de14a3f49bde45c22)
+        ;
+
+        
+    
+    
+            marker_addd08e1b23cde4de63f46c36703ddcc.bindTooltip(
+                `<div>
+                     National Hospital Karapitiya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_addd08e1b23cde4de63f46c36703ddcc.setIcon(icon_6c89f2d1272b5f2719267913102563dc);
+            
+    
+            var marker_6a80a934e855130a27bfd1e35cebf9f8 = L.marker(
+                [6.0535, 80.221],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_f1a950af9368f6c54f973c265b9b6c4f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_62383ab95793fa310781ed1e8a4cf211 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7f308aa66cf4c335eba8388b81dcf32c = $(`<div id="html_7f308aa66cf4c335eba8388b81dcf32c" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Galle</b><br>Trip #14: Southern – Galle & Matara<br>22–23 Jun 2026</div>`)[0];
+                popup_62383ab95793fa310781ed1e8a4cf211.setContent(html_7f308aa66cf4c335eba8388b81dcf32c);
+            
+        
+
+        marker_6a80a934e855130a27bfd1e35cebf9f8.bindPopup(popup_62383ab95793fa310781ed1e8a4cf211)
+        ;
+
+        
+    
+    
+            marker_6a80a934e855130a27bfd1e35cebf9f8.bindTooltip(
+                `<div>
+                     RDHS Office Galle
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6a80a934e855130a27bfd1e35cebf9f8.setIcon(icon_f1a950af9368f6c54f973c265b9b6c4f);
+            
+    
+            var marker_02ce5824d857893c588335e9721547e6 = L.marker(
+                [5.9483, 80.5353],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_2d4b3232ed2e1ce2861aae66f9b6dc5e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ce1c80755f5a4e7799b6810b01ece9d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_f6ed89c48b067c9ae6a6e73de925a086 = $(`<div id="html_f6ed89c48b067c9ae6a6e73de925a086" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Matara</b><br>Trip #14: Southern – Galle & Matara<br>22–23 Jun 2026</div>`)[0];
+                popup_0ce1c80755f5a4e7799b6810b01ece9d.setContent(html_f6ed89c48b067c9ae6a6e73de925a086);
+            
+        
+
+        marker_02ce5824d857893c588335e9721547e6.bindPopup(popup_0ce1c80755f5a4e7799b6810b01ece9d)
+        ;
+
+        
+    
+    
+            marker_02ce5824d857893c588335e9721547e6.bindTooltip(
+                `<div>
+                     RDHS Office Matara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_02ce5824d857893c588335e9721547e6.setIcon(icon_2d4b3232ed2e1ce2861aae66f9b6dc5e);
+            
+    
+            var poly_line_83cf259b4c6351cae5785fe3ddec087e = L.polyline(
+                [[6.9271, 79.8612], [6.0536, 80.22], [6.0535, 80.221], [5.9483, 80.5353], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_83cf259b4c6351cae5785fe3ddec087e.bindTooltip(
+                `<div>
+                     Trip #14: Southern – Galle & Matara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_aabd7ff1a6ead2458ff4ad7a91add681 = L.marker(
+                [6.5861, 80.6183],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_61f78f34ad55dfa6f0f81b67422a091b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bd4ab2a839e7a093b22c72cb1a268e03 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d23a0f04f80f6e059b6dbd5383570a95 = $(`<div id="html_d23a0f04f80f6e059b6dbd5383570a95" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Kahawatte</b><br>Trip #15: Sabaragamuwa – Kahawatte, Kalawana, Kolonna<br>06–08 Jul 2026</div>`)[0];
+                popup_bd4ab2a839e7a093b22c72cb1a268e03.setContent(html_d23a0f04f80f6e059b6dbd5383570a95);
+            
+        
+
+        marker_aabd7ff1a6ead2458ff4ad7a91add681.bindPopup(popup_bd4ab2a839e7a093b22c72cb1a268e03)
+        ;
+
+        
+    
+    
+            marker_aabd7ff1a6ead2458ff4ad7a91add681.bindTooltip(
+                `<div>
+                     Base Hospital Kahawatte
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_aabd7ff1a6ead2458ff4ad7a91add681.setIcon(icon_61f78f34ad55dfa6f0f81b67422a091b);
+            
+    
+            var marker_5fd0d456fe4841efd0a195f97557fc79 = L.marker(
+                [6.5433, 80.4033],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_5b5c09e87886b3ff2401d40a39c953a0 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0f8972087ad432c3ea6669abb1e7ff20 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_7cd8209c9e5df3fa2e974a772d6d4eff = $(`<div id="html_7cd8209c9e5df3fa2e974a772d6d4eff" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Kalawana</b><br>Trip #15: Sabaragamuwa – Kahawatte, Kalawana, Kolonna<br>06–08 Jul 2026</div>`)[0];
+                popup_0f8972087ad432c3ea6669abb1e7ff20.setContent(html_7cd8209c9e5df3fa2e974a772d6d4eff);
+            
+        
+
+        marker_5fd0d456fe4841efd0a195f97557fc79.bindPopup(popup_0f8972087ad432c3ea6669abb1e7ff20)
+        ;
+
+        
+    
+    
+            marker_5fd0d456fe4841efd0a195f97557fc79.bindTooltip(
+                `<div>
+                     Base Hospital Kalawana
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_5fd0d456fe4841efd0a195f97557fc79.setIcon(icon_5b5c09e87886b3ff2401d40a39c953a0);
+            
+    
+            var marker_4b6bca537241a9fe04628526f0ad779d = L.marker(
+                [6.3533, 80.5083],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_f851b1f89375059ba1647e893c697c01 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ce56def67e0cbafc1a1375e1f62363d8 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_e569c44bc88d7b6e8d4fca1fbbc8e0f1 = $(`<div id="html_e569c44bc88d7b6e8d4fca1fbbc8e0f1" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Kolonna</b><br>Trip #15: Sabaragamuwa – Kahawatte, Kalawana, Kolonna<br>06–08 Jul 2026</div>`)[0];
+                popup_ce56def67e0cbafc1a1375e1f62363d8.setContent(html_e569c44bc88d7b6e8d4fca1fbbc8e0f1);
+            
+        
+
+        marker_4b6bca537241a9fe04628526f0ad779d.bindPopup(popup_ce56def67e0cbafc1a1375e1f62363d8)
+        ;
+
+        
+    
+    
+            marker_4b6bca537241a9fe04628526f0ad779d.bindTooltip(
+                `<div>
+                     Base Hospital Kolonna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_4b6bca537241a9fe04628526f0ad779d.setIcon(icon_f851b1f89375059ba1647e893c697c01);
+            
+    
+            var poly_line_73d461d2987b83dcf92303eb3f2407ff = L.polyline(
+                [[6.9271, 79.8612], [6.5861, 80.6183], [6.5433, 80.4033], [6.3533, 80.5083], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#9C27B0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#9C27B0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_73d461d2987b83dcf92303eb3f2407ff.bindTooltip(
+                `<div>
+                     Trip #15: Sabaragamuwa – Kahawatte, Kalawana, Kolonna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6ac813bbae11677b08f4398ab7bc523c = L.marker(
+                [6.3411, 80.8469],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_303a55d4e37159e47d93e3815780b501 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_8460b45c7b0c56b6f3b3a008c8b7baaf = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_810ac541c98432eb952d666df25389a9 = $(`<div id="html_810ac541c98432eb952d666df25389a9" style="width: 100.0%; height: 100.0%;"><b>District General Hospital Embilipitiya</b><br>Trip #16: Embilipitiya & Hambantota<br>13–14 Jul 2026</div>`)[0];
+                popup_8460b45c7b0c56b6f3b3a008c8b7baaf.setContent(html_810ac541c98432eb952d666df25389a9);
+            
+        
+
+        marker_6ac813bbae11677b08f4398ab7bc523c.bindPopup(popup_8460b45c7b0c56b6f3b3a008c8b7baaf)
+        ;
+
+        
+    
+    
+            marker_6ac813bbae11677b08f4398ab7bc523c.bindTooltip(
+                `<div>
+                     District General Hospital Embilipitiya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6ac813bbae11677b08f4398ab7bc523c.setIcon(icon_303a55d4e37159e47d93e3815780b501);
+            
+    
+            var marker_3e7ed3929cf9669e90af72206740f9b4 = L.marker(
+                [6.1239, 81.1183],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_08814ed157ac11a58ab82c96640102a8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b0c10ae84fbf1418e6def682479801d5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_07c7b3152125935c1bfe9ba86a1e7ee9 = $(`<div id="html_07c7b3152125935c1bfe9ba86a1e7ee9" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Hambantota</b><br>Trip #16: Embilipitiya & Hambantota<br>13–14 Jul 2026</div>`)[0];
+                popup_b0c10ae84fbf1418e6def682479801d5.setContent(html_07c7b3152125935c1bfe9ba86a1e7ee9);
+            
+        
+
+        marker_3e7ed3929cf9669e90af72206740f9b4.bindPopup(popup_b0c10ae84fbf1418e6def682479801d5)
+        ;
+
+        
+    
+    
+            marker_3e7ed3929cf9669e90af72206740f9b4.bindTooltip(
+                `<div>
+                     RDHS Office Hambantota
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3e7ed3929cf9669e90af72206740f9b4.setIcon(icon_08814ed157ac11a58ab82c96640102a8);
+            
+    
+            var poly_line_658ad3333e61353335c3b308e640c9b7 = L.polyline(
+                [[6.9271, 79.8612], [6.3411, 80.8469], [6.1239, 81.1183], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_658ad3333e61353335c3b308e640c9b7.bindTooltip(
+                `<div>
+                     Trip #16: Embilipitiya & Hambantota
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_b6097934c89ee46f4cc71fa423c18030 = L.marker(
+                [8.0317, 80.3233],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_9cd67c90abc1a4449082bc62ad70e201 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_1770a421cbd7628f16986298a7bedca0 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ecbd2d7194df6d2a80e27572fa140015 = $(`<div id="html_ecbd2d7194df6d2a80e27572fa140015" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Galgamuwa</b><br>Trip #17: Galgamuwa & Puttalam<br>20–21 Jul 2026</div>`)[0];
+                popup_1770a421cbd7628f16986298a7bedca0.setContent(html_ecbd2d7194df6d2a80e27572fa140015);
+            
+        
+
+        marker_b6097934c89ee46f4cc71fa423c18030.bindPopup(popup_1770a421cbd7628f16986298a7bedca0)
+        ;
+
+        
+    
+    
+            marker_b6097934c89ee46f4cc71fa423c18030.bindTooltip(
+                `<div>
+                     Base Hospital Galgamuwa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b6097934c89ee46f4cc71fa423c18030.setIcon(icon_9cd67c90abc1a4449082bc62ad70e201);
+            
+    
+            var marker_88359a880ad2515d823e84bec1519965 = L.marker(
+                [8.0306, 79.8397],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_45660004941392fd5a1fe8460a03a648 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_88eb2c3d583a350e35ccec4d55840849 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_75128d16685ef790f322843e0fcb95c3 = $(`<div id="html_75128d16685ef790f322843e0fcb95c3" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Puttalam</b><br>Trip #17: Galgamuwa & Puttalam<br>20–21 Jul 2026</div>`)[0];
+                popup_88eb2c3d583a350e35ccec4d55840849.setContent(html_75128d16685ef790f322843e0fcb95c3);
+            
+        
+
+        marker_88359a880ad2515d823e84bec1519965.bindPopup(popup_88eb2c3d583a350e35ccec4d55840849)
+        ;
+
+        
+    
+    
+            marker_88359a880ad2515d823e84bec1519965.bindTooltip(
+                `<div>
+                     RDHS Office Puttalam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_88359a880ad2515d823e84bec1519965.setIcon(icon_45660004941392fd5a1fe8460a03a648);
+            
+    
+            var poly_line_9f608235ff0bb4a24c3453951b0dd9cf = L.polyline(
+                [[6.9271, 79.8612], [8.0317, 80.3233], [8.0306, 79.8397], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_9f608235ff0bb4a24c3453951b0dd9cf.bindTooltip(
+                `<div>
+                     Trip #17: Galgamuwa & Puttalam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_833e583fe676a69c4d92ff26ef69ba9b = L.marker(
+                [7.2906, 80.6337],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_e4cad558574062471558fcbe0d1e297a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2136ca1c0b1d5b4ee29ed969ac1100c9 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_97d37a3ee77c8f7d3543a1b031b44a3f = $(`<div id="html_97d37a3ee77c8f7d3543a1b031b44a3f" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Kandy</b><br>Trip #18: Kandy & Matale<br>27–28 Jul 2026</div>`)[0];
+                popup_2136ca1c0b1d5b4ee29ed969ac1100c9.setContent(html_97d37a3ee77c8f7d3543a1b031b44a3f);
+            
+        
+
+        marker_833e583fe676a69c4d92ff26ef69ba9b.bindPopup(popup_2136ca1c0b1d5b4ee29ed969ac1100c9)
+        ;
+
+        
+    
+    
+            marker_833e583fe676a69c4d92ff26ef69ba9b.bindTooltip(
+                `<div>
+                     RDHS Office Kandy
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_833e583fe676a69c4d92ff26ef69ba9b.setIcon(icon_e4cad558574062471558fcbe0d1e297a);
+            
+    
+            var marker_99a156c7ed7efcd895dab71091c4d10a = L.marker(
+                [7.4678, 80.6244],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_76e68452329ebc11a5ceac70892d8ee8 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_04aab49de61e0a48c9eb76138d5fe922 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_af73e3e697ae6ccfd49ce5ce11de2026 = $(`<div id="html_af73e3e697ae6ccfd49ce5ce11de2026" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Matale</b><br>Trip #18: Kandy & Matale<br>27–28 Jul 2026</div>`)[0];
+                popup_04aab49de61e0a48c9eb76138d5fe922.setContent(html_af73e3e697ae6ccfd49ce5ce11de2026);
+            
+        
+
+        marker_99a156c7ed7efcd895dab71091c4d10a.bindPopup(popup_04aab49de61e0a48c9eb76138d5fe922)
+        ;
+
+        
+    
+    
+            marker_99a156c7ed7efcd895dab71091c4d10a.bindTooltip(
+                `<div>
+                     RDHS Office Matale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_99a156c7ed7efcd895dab71091c4d10a.setIcon(icon_76e68452329ebc11a5ceac70892d8ee8);
+            
+    
+            var poly_line_ba3a466453fea1ad7751357d4e7ccb8d = L.polyline(
+                [[6.9271, 79.8612], [7.2906, 80.6337], [7.4678, 80.6244], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_ba3a466453fea1ad7751357d4e7ccb8d.bindTooltip(
+                `<div>
+                     Trip #18: Kandy & Matale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dfeafb141d1804b11baa432f04f4b451 = L.marker(
+                [6.9028, 80.9153],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_87dc862387347038a8f4fdeead030def = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0644605612607228ff5ab365b44d7508 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0fbc9437bf89c3473d33173f4e45b12e = $(`<div id="html_0fbc9437bf89c3473d33173f4e45b12e" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Welimada</b><br>Trip #19: Welimada, Nuwara Eliya & Badulla<br>03–04 Aug 2026</div>`)[0];
+                popup_0644605612607228ff5ab365b44d7508.setContent(html_0fbc9437bf89c3473d33173f4e45b12e);
+            
+        
+
+        marker_dfeafb141d1804b11baa432f04f4b451.bindPopup(popup_0644605612607228ff5ab365b44d7508)
+        ;
+
+        
+    
+    
+            marker_dfeafb141d1804b11baa432f04f4b451.bindTooltip(
+                `<div>
+                     Base Hospital Welimada
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dfeafb141d1804b11baa432f04f4b451.setIcon(icon_87dc862387347038a8f4fdeead030def);
+            
+    
+            var marker_b1ac528a7a2db8fe7a06d022e309b1c6 = L.marker(
+                [6.9497, 80.7892],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_98acf1824e554a8b8ec108180596368b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ab5fcbb6ab461202a39be205804e68f4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_b1bb7fd6998119f70414e2cf819f042f = $(`<div id="html_b1bb7fd6998119f70414e2cf819f042f" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Nuwara Eliya</b><br>Trip #19: Welimada, Nuwara Eliya & Badulla<br>03–04 Aug 2026</div>`)[0];
+                popup_ab5fcbb6ab461202a39be205804e68f4.setContent(html_b1bb7fd6998119f70414e2cf819f042f);
+            
+        
+
+        marker_b1ac528a7a2db8fe7a06d022e309b1c6.bindPopup(popup_ab5fcbb6ab461202a39be205804e68f4)
+        ;
+
+        
+    
+    
+            marker_b1ac528a7a2db8fe7a06d022e309b1c6.bindTooltip(
+                `<div>
+                     RDHS Office Nuwara Eliya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_b1ac528a7a2db8fe7a06d022e309b1c6.setIcon(icon_98acf1824e554a8b8ec108180596368b);
+            
+    
+            var marker_da05fb96dcab548f128be8f2de862ea2 = L.marker(
+                [6.9894, 81.0553],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_28ce76a477d57a6672ebfb8fcdefc83a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_77d7686092c422ac1ffde854b5b9779e = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_656fdf8ba24c050c303d7544255976bf = $(`<div id="html_656fdf8ba24c050c303d7544255976bf" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Badulla</b><br>Trip #19: Welimada, Nuwara Eliya & Badulla<br>03–04 Aug 2026</div>`)[0];
+                popup_77d7686092c422ac1ffde854b5b9779e.setContent(html_656fdf8ba24c050c303d7544255976bf);
+            
+        
+
+        marker_da05fb96dcab548f128be8f2de862ea2.bindPopup(popup_77d7686092c422ac1ffde854b5b9779e)
+        ;
+
+        
+    
+    
+            marker_da05fb96dcab548f128be8f2de862ea2.bindTooltip(
+                `<div>
+                     RDHS Office Badulla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_da05fb96dcab548f128be8f2de862ea2.setIcon(icon_28ce76a477d57a6672ebfb8fcdefc83a);
+            
+    
+            var poly_line_fd7ea10fa604bee8804f442bb3cd8e54 = L.polyline(
+                [[6.9271, 79.8612], [6.9028, 80.9153], [6.9497, 80.7892], [6.9894, 81.0553], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_fd7ea10fa604bee8804f442bb3cd8e54.bindTooltip(
+                `<div>
+                     Trip #19: Welimada, Nuwara Eliya & Badulla
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_295ee95918cbeec3a4526e3058d6aef5 = L.marker(
+                [7.1619, 81.2136],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_af328bd92d657a9175fbb73f3803bfb4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f5ca11c18e50ec44c7fbf7bf511a0096 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_0a1ed3887f47b5ff96d208060ab22262 = $(`<div id="html_0a1ed3887f47b5ff96d208060ab22262" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Bibile</b><br>Trip #20: Bibile & Monaragala<br>10–11 Aug 2026</div>`)[0];
+                popup_f5ca11c18e50ec44c7fbf7bf511a0096.setContent(html_0a1ed3887f47b5ff96d208060ab22262);
+            
+        
+
+        marker_295ee95918cbeec3a4526e3058d6aef5.bindPopup(popup_f5ca11c18e50ec44c7fbf7bf511a0096)
+        ;
+
+        
+    
+    
+            marker_295ee95918cbeec3a4526e3058d6aef5.bindTooltip(
+                `<div>
+                     Base Hospital Bibile
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_295ee95918cbeec3a4526e3058d6aef5.setIcon(icon_af328bd92d657a9175fbb73f3803bfb4);
+            
+    
+            var marker_e089ee2ee9838aa8c8a773fd3a6cf40f = L.marker(
+                [6.8728, 81.3508],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_a8e70b9214cd51aae15a0734b783719e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_b7bd8ba463810a57906165d5799e86f6 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3093b5af87258d649d1122210ee18243 = $(`<div id="html_3093b5af87258d649d1122210ee18243" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Monaragala</b><br>Trip #20: Bibile & Monaragala<br>10–11 Aug 2026</div>`)[0];
+                popup_b7bd8ba463810a57906165d5799e86f6.setContent(html_3093b5af87258d649d1122210ee18243);
+            
+        
+
+        marker_e089ee2ee9838aa8c8a773fd3a6cf40f.bindPopup(popup_b7bd8ba463810a57906165d5799e86f6)
+        ;
+
+        
+    
+    
+            marker_e089ee2ee9838aa8c8a773fd3a6cf40f.bindTooltip(
+                `<div>
+                     RDHS Office Monaragala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e089ee2ee9838aa8c8a773fd3a6cf40f.setIcon(icon_a8e70b9214cd51aae15a0734b783719e);
+            
+    
+            var poly_line_81e9c4e9bbbdae955c5fdafd8a8efc1f = L.polyline(
+                [[6.9271, 79.8612], [7.1619, 81.2136], [6.8728, 81.3508], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_81e9c4e9bbbdae955c5fdafd8a8efc1f.bindTooltip(
+                `<div>
+                     Trip #20: Bibile & Monaragala
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_738a7e74e71593d2b3ff8e9741683507 = L.marker(
+                [7.1117, 81.5367],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_28a2fbf64f5af0b0e089d37dca7365d6 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f637efdb5ccbaa72231eb598a87ac59d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_6222172b40d78d38b7770da03479a3d0 = $(`<div id="html_6222172b40d78d38b7770da03479a3d0" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Siyambalanduwa</b><br>Trip #21: Siyambalanduwa & Ampara<br>17–18 Aug 2026</div>`)[0];
+                popup_f637efdb5ccbaa72231eb598a87ac59d.setContent(html_6222172b40d78d38b7770da03479a3d0);
+            
+        
+
+        marker_738a7e74e71593d2b3ff8e9741683507.bindPopup(popup_f637efdb5ccbaa72231eb598a87ac59d)
+        ;
+
+        
+    
+    
+            marker_738a7e74e71593d2b3ff8e9741683507.bindTooltip(
+                `<div>
+                     Base Hospital Siyambalanduwa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_738a7e74e71593d2b3ff8e9741683507.setIcon(icon_28a2fbf64f5af0b0e089d37dca7365d6);
+            
+    
+            var marker_c7d99ebeb97a4d7d5546a6e808105cd0 = L.marker(
+                [7.2972, 81.6744],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_17dae1fc1a51ae83b75f6fa51686b66b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_aa45f7d521e4dc1d79bebf0d666e8bc4 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ead30f3b326f0e650c3956ff990c67eb = $(`<div id="html_ead30f3b326f0e650c3956ff990c67eb" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Ampara</b><br>Trip #21: Siyambalanduwa & Ampara<br>17–18 Aug 2026</div>`)[0];
+                popup_aa45f7d521e4dc1d79bebf0d666e8bc4.setContent(html_ead30f3b326f0e650c3956ff990c67eb);
+            
+        
+
+        marker_c7d99ebeb97a4d7d5546a6e808105cd0.bindPopup(popup_aa45f7d521e4dc1d79bebf0d666e8bc4)
+        ;
+
+        
+    
+    
+            marker_c7d99ebeb97a4d7d5546a6e808105cd0.bindTooltip(
+                `<div>
+                     RDHS Office Ampara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c7d99ebeb97a4d7d5546a6e808105cd0.setIcon(icon_17dae1fc1a51ae83b75f6fa51686b66b);
+            
+    
+            var poly_line_ee0cc50ada24bbc9fd2e8c98ca1cfb39 = L.polyline(
+                [[6.9271, 79.8612], [7.1117, 81.5367], [7.2972, 81.6744], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_ee0cc50ada24bbc9fd2e8c98ca1cfb39.bindTooltip(
+                `<div>
+                     Trip #21: Siyambalanduwa & Ampara
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_e02d871f391adeb4547cf7a8010006f4 = L.marker(
+                [8.0233, 80.6167],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_5b359d6a6e5b0adefe3db6fbf42cb730 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3ff534233e38a9f4fb65f22e8cd672e5 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_44658bf623db13f0b8fb91dc7e5c58e9 = $(`<div id="html_44658bf623db13f0b8fb91dc7e5c58e9" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Kekirawa</b><br>Trip #22: Kekirawa, Anuradhapura & Kebithigollawa<br>31 Aug – 02 Sep 2026</div>`)[0];
+                popup_3ff534233e38a9f4fb65f22e8cd672e5.setContent(html_44658bf623db13f0b8fb91dc7e5c58e9);
+            
+        
+
+        marker_e02d871f391adeb4547cf7a8010006f4.bindPopup(popup_3ff534233e38a9f4fb65f22e8cd672e5)
+        ;
+
+        
+    
+    
+            marker_e02d871f391adeb4547cf7a8010006f4.bindTooltip(
+                `<div>
+                     Base Hospital Kekirawa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e02d871f391adeb4547cf7a8010006f4.setIcon(icon_5b359d6a6e5b0adefe3db6fbf42cb730);
+            
+    
+            var marker_7d867d2eb5f061582c2e5b1595b55abd = L.marker(
+                [8.3114, 80.4037],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_f048f86273c2e294de943acd50a11067 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f7d961462aaf34a5dcf1e2c8ba000db1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_345fc100910b31112041ac5748247a48 = $(`<div id="html_345fc100910b31112041ac5748247a48" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Anuradhapura</b><br>Trip #22: Kekirawa, Anuradhapura & Kebithigollawa<br>31 Aug – 02 Sep 2026</div>`)[0];
+                popup_f7d961462aaf34a5dcf1e2c8ba000db1.setContent(html_345fc100910b31112041ac5748247a48);
+            
+        
+
+        marker_7d867d2eb5f061582c2e5b1595b55abd.bindPopup(popup_f7d961462aaf34a5dcf1e2c8ba000db1)
+        ;
+
+        
+    
+    
+            marker_7d867d2eb5f061582c2e5b1595b55abd.bindTooltip(
+                `<div>
+                     RDHS Office Anuradhapura
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7d867d2eb5f061582c2e5b1595b55abd.setIcon(icon_f048f86273c2e294de943acd50a11067);
+            
+    
+            var marker_e11b7549660f2c626e5ac1e1083a7220 = L.marker(
+                [8.7017, 80.9033],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_0bc02857edf28406c7bc940584f71dd9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9229575dc8ce6ad30341207ee01b79ca = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_fea46217001b7641094a6612c2fdc9b0 = $(`<div id="html_fea46217001b7641094a6612c2fdc9b0" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Kebithigollawa</b><br>Trip #22: Kekirawa, Anuradhapura & Kebithigollawa<br>31 Aug – 02 Sep 2026</div>`)[0];
+                popup_9229575dc8ce6ad30341207ee01b79ca.setContent(html_fea46217001b7641094a6612c2fdc9b0);
+            
+        
+
+        marker_e11b7549660f2c626e5ac1e1083a7220.bindPopup(popup_9229575dc8ce6ad30341207ee01b79ca)
+        ;
+
+        
+    
+    
+            marker_e11b7549660f2c626e5ac1e1083a7220.bindTooltip(
+                `<div>
+                     Base Hospital Kebithigollawa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e11b7549660f2c626e5ac1e1083a7220.setIcon(icon_0bc02857edf28406c7bc940584f71dd9);
+            
+    
+            var poly_line_9758a4161a584037c971a99553910e79 = L.polyline(
+                [[6.9271, 79.8612], [8.0233, 80.6167], [8.3114, 80.4037], [8.7017, 80.9033], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#9C27B0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#9C27B0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_9758a4161a584037c971a99553910e79.bindTooltip(
+                `<div>
+                     Trip #22: Kekirawa, Anuradhapura & Kebithigollawa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_7cbc072cf7581bd82fa149ac62b68de5 = L.marker(
+                [7.9983, 80.9783],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_46860c677a206681a8327bbd561bafef = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_84e8bac34d2f27af06368ec69a3c75ba = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_ecd0fdfd33378fa4066cf77dc085390a = $(`<div id="html_ecd0fdfd33378fa4066cf77dc085390a" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Hingurakgoda</b><br>Trip #23: Hingurakgoda, Polonnaruwa & Dehiattakandiya<br>07–08 Sep 2026</div>`)[0];
+                popup_84e8bac34d2f27af06368ec69a3c75ba.setContent(html_ecd0fdfd33378fa4066cf77dc085390a);
+            
+        
+
+        marker_7cbc072cf7581bd82fa149ac62b68de5.bindPopup(popup_84e8bac34d2f27af06368ec69a3c75ba)
+        ;
+
+        
+    
+    
+            marker_7cbc072cf7581bd82fa149ac62b68de5.bindTooltip(
+                `<div>
+                     Base Hospital Hingurakgoda
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_7cbc072cf7581bd82fa149ac62b68de5.setIcon(icon_46860c677a206681a8327bbd561bafef);
+            
+    
+            var marker_e3fd08bd1fb532f31fc49a4542059bad = L.marker(
+                [7.9403, 81.0006],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_b7852dfdb641ce40fc1f47992a3fa34a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_90c7b2a476d4b37b88f1828a7dcaea36 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_3de39ada120084e559f30f733f4aaa2e = $(`<div id="html_3de39ada120084e559f30f733f4aaa2e" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Polonnaruwa</b><br>Trip #23: Hingurakgoda, Polonnaruwa & Dehiattakandiya<br>07–08 Sep 2026</div>`)[0];
+                popup_90c7b2a476d4b37b88f1828a7dcaea36.setContent(html_3de39ada120084e559f30f733f4aaa2e);
+            
+        
+
+        marker_e3fd08bd1fb532f31fc49a4542059bad.bindPopup(popup_90c7b2a476d4b37b88f1828a7dcaea36)
+        ;
+
+        
+    
+    
+            marker_e3fd08bd1fb532f31fc49a4542059bad.bindTooltip(
+                `<div>
+                     RDHS Office Polonnaruwa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e3fd08bd1fb532f31fc49a4542059bad.setIcon(icon_b7852dfdb641ce40fc1f47992a3fa34a);
+            
+    
+            var marker_1a90deb1c18fd3d512d30ac35650e753 = L.marker(
+                [7.6869, 81.1978],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_48fe6c55041301ee39b0578c99e7221e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0633da4b556833d4eb70f5f530837745 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_73bf26494f78ad7711b031388c25fa88 = $(`<div id="html_73bf26494f78ad7711b031388c25fa88" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Dehiattakandiya</b><br>Trip #23: Hingurakgoda, Polonnaruwa & Dehiattakandiya<br>07–08 Sep 2026</div>`)[0];
+                popup_0633da4b556833d4eb70f5f530837745.setContent(html_73bf26494f78ad7711b031388c25fa88);
+            
+        
+
+        marker_1a90deb1c18fd3d512d30ac35650e753.bindPopup(popup_0633da4b556833d4eb70f5f530837745)
+        ;
+
+        
+    
+    
+            marker_1a90deb1c18fd3d512d30ac35650e753.bindTooltip(
+                `<div>
+                     Base Hospital Dehiattakandiya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_1a90deb1c18fd3d512d30ac35650e753.setIcon(icon_48fe6c55041301ee39b0578c99e7221e);
+            
+    
+            var poly_line_012a8e77131a115878846aad0ed0d261 = L.polyline(
+                [[6.9271, 79.8612], [7.9983, 80.9783], [7.9403, 81.0006], [7.6869, 81.1978], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_012a8e77131a115878846aad0ed0d261.bindTooltip(
+                `<div>
+                     Trip #23: Hingurakgoda, Polonnaruwa & Dehiattakandiya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_193505466430387edc60f1fb3b7bb710 = L.marker(
+                [8.3967, 81.035],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_94108349a492d07676bc8ea80af5af3e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_75985ede29e65663f0182dd79487ba8b = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_324167bdb830b1e8896fb8cb92637536 = $(`<div id="html_324167bdb830b1e8896fb8cb92637536" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Kanthale</b><br>Trip #24: Eastern – Kanthale, Trincomalee, Mahaoya & Batticaloa<br>14–16 Sep 2026</div>`)[0];
+                popup_75985ede29e65663f0182dd79487ba8b.setContent(html_324167bdb830b1e8896fb8cb92637536);
+            
+        
+
+        marker_193505466430387edc60f1fb3b7bb710.bindPopup(popup_75985ede29e65663f0182dd79487ba8b)
+        ;
+
+        
+    
+    
+            marker_193505466430387edc60f1fb3b7bb710.bindTooltip(
+                `<div>
+                     Base Hospital Kanthale
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_193505466430387edc60f1fb3b7bb710.setIcon(icon_94108349a492d07676bc8ea80af5af3e);
+            
+    
+            var marker_c9f66458db35d19534c5f6ab8289a6c0 = L.marker(
+                [8.5922, 81.2153],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_54fdd98bd0c88b4878f88fabec36a29a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d7484228a027a8ed67fa1cc1754d5d0d = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d78004651b473e9b3e2f767d13fca1a5 = $(`<div id="html_d78004651b473e9b3e2f767d13fca1a5" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Trincomalee</b><br>Trip #24: Eastern – Kanthale, Trincomalee, Mahaoya & Batticaloa<br>14–16 Sep 2026</div>`)[0];
+                popup_d7484228a027a8ed67fa1cc1754d5d0d.setContent(html_d78004651b473e9b3e2f767d13fca1a5);
+            
+        
+
+        marker_c9f66458db35d19534c5f6ab8289a6c0.bindPopup(popup_d7484228a027a8ed67fa1cc1754d5d0d)
+        ;
+
+        
+    
+    
+            marker_c9f66458db35d19534c5f6ab8289a6c0.bindTooltip(
+                `<div>
+                     RDHS Office Trincomalee
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c9f66458db35d19534c5f6ab8289a6c0.setIcon(icon_54fdd98bd0c88b4878f88fabec36a29a);
+            
+    
+            var marker_0c1d938f7d36505357175a0b458fdf2a = L.marker(
+                [7.7281, 81.3097],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_a853c4c64567978dd9a16d1e9b9ce876 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0a65ffba257ebe62756a12737fa9bd45 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_a56d940d059faa478753121093c16b4b = $(`<div id="html_a56d940d059faa478753121093c16b4b" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Mahaoya</b><br>Trip #24: Eastern – Kanthale, Trincomalee, Mahaoya & Batticaloa<br>14–16 Sep 2026</div>`)[0];
+                popup_0a65ffba257ebe62756a12737fa9bd45.setContent(html_a56d940d059faa478753121093c16b4b);
+            
+        
+
+        marker_0c1d938f7d36505357175a0b458fdf2a.bindPopup(popup_0a65ffba257ebe62756a12737fa9bd45)
+        ;
+
+        
+    
+    
+            marker_0c1d938f7d36505357175a0b458fdf2a.bindTooltip(
+                `<div>
+                     Base Hospital Mahaoya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0c1d938f7d36505357175a0b458fdf2a.setIcon(icon_a853c4c64567978dd9a16d1e9b9ce876);
+            
+    
+            var marker_e14caffdd37be145fe13bd994a80ce0e = L.marker(
+                [7.7167, 81.6997],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_625aeecd87bfb088d865b07fb0175431 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_16e0aa975875cc635dfefdfc3648896c = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_43a8b68a4458e355872c35d4457a2446 = $(`<div id="html_43a8b68a4458e355872c35d4457a2446" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Batticaloa</b><br>Trip #24: Eastern – Kanthale, Trincomalee, Mahaoya & Batticaloa<br>14–16 Sep 2026</div>`)[0];
+                popup_16e0aa975875cc635dfefdfc3648896c.setContent(html_43a8b68a4458e355872c35d4457a2446);
+            
+        
+
+        marker_e14caffdd37be145fe13bd994a80ce0e.bindPopup(popup_16e0aa975875cc635dfefdfc3648896c)
+        ;
+
+        
+    
+    
+            marker_e14caffdd37be145fe13bd994a80ce0e.bindTooltip(
+                `<div>
+                     RDHS Office Batticaloa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_e14caffdd37be145fe13bd994a80ce0e.setIcon(icon_625aeecd87bfb088d865b07fb0175431);
+            
+    
+            var poly_line_2b6b99ae316a446fee28c0aa44e56115 = L.polyline(
+                [[6.9271, 79.8612], [8.3967, 81.035], [8.5922, 81.2153], [7.7281, 81.3097], [7.7167, 81.6997], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#9C27B0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#9C27B0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_2b6b99ae316a446fee28c0aa44e56115.bindTooltip(
+                `<div>
+                     Trip #24: Eastern – Kanthale, Trincomalee, Mahaoya & Batticaloa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_0e602cbe916a851f90e9273135a3e97d = L.marker(
+                [7.3989, 81.8281],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_5e2b0438b2168dcbf3124fbdb728e404 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_54e782c53f20a62264fdd6ea7cd187de = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_5c7cb3635159224514b41caa8132de0a = $(`<div id="html_5c7cb3635159224514b41caa8132de0a" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Kalmunai South AMH</b><br>Trip #25: Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>21–23 Sep 2026</div>`)[0];
+                popup_54e782c53f20a62264fdd6ea7cd187de.setContent(html_5c7cb3635159224514b41caa8132de0a);
+            
+        
+
+        marker_0e602cbe916a851f90e9273135a3e97d.bindPopup(popup_54e782c53f20a62264fdd6ea7cd187de)
+        ;
+
+        
+    
+    
+            marker_0e602cbe916a851f90e9273135a3e97d.bindTooltip(
+                `<div>
+                     Base Hospital Kalmunai South AMH
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_0e602cbe916a851f90e9273135a3e97d.setIcon(icon_5e2b0438b2168dcbf3124fbdb728e404);
+            
+    
+            var marker_a5fe00f8354e0edd0dd6f9bb7d87158d = L.marker(
+                [7.4136, 81.8239],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_a270ef776ea6e02a473b4ff7ee7cf18f = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_622d48284145ee44e63058ddbe9261ee = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_674984ad826b3eb0075f06f8b74013bd = $(`<div id="html_674984ad826b3eb0075f06f8b74013bd" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Kalmunai</b><br>Trip #25: Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>21–23 Sep 2026</div>`)[0];
+                popup_622d48284145ee44e63058ddbe9261ee.setContent(html_674984ad826b3eb0075f06f8b74013bd);
+            
+        
+
+        marker_a5fe00f8354e0edd0dd6f9bb7d87158d.bindPopup(popup_622d48284145ee44e63058ddbe9261ee)
+        ;
+
+        
+    
+    
+            marker_a5fe00f8354e0edd0dd6f9bb7d87158d.bindTooltip(
+                `<div>
+                     RDHS Office Kalmunai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a5fe00f8354e0edd0dd6f9bb7d87158d.setIcon(icon_a270ef776ea6e02a473b4ff7ee7cf18f);
+            
+    
+            var marker_afd302dd70768f7479fd8bf69c15c890 = L.marker(
+                [7.3769, 81.8458],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_b8d5e94fbfefe259fbf564575c37573b = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_9c42ff72b15baf8cbef2bc51a5d700e2 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_2cc2b32d3b15b1c177c4949d54d5da6b = $(`<div id="html_2cc2b32d3b15b1c177c4949d54d5da6b" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Sammanthurai</b><br>Trip #25: Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>21–23 Sep 2026</div>`)[0];
+                popup_9c42ff72b15baf8cbef2bc51a5d700e2.setContent(html_2cc2b32d3b15b1c177c4949d54d5da6b);
+            
+        
+
+        marker_afd302dd70768f7479fd8bf69c15c890.bindPopup(popup_9c42ff72b15baf8cbef2bc51a5d700e2)
+        ;
+
+        
+    
+    
+            marker_afd302dd70768f7479fd8bf69c15c890.bindTooltip(
+                `<div>
+                     Base Hospital Sammanthurai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_afd302dd70768f7479fd8bf69c15c890.setIcon(icon_b8d5e94fbfefe259fbf564575c37573b);
+            
+    
+            var marker_47f10ec696f26d7af70351e9248acc71 = L.marker(
+                [7.2181, 81.8494],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_a5fd98fd9d300344daaaccce869d15a1 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72cddb7c02d643717856ac6648cad773 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_be7e4a4a8aa1ab25414eb9951a80ad26 = $(`<div id="html_be7e4a4a8aa1ab25414eb9951a80ad26" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Akkaraipattu</b><br>Trip #25: Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>21–23 Sep 2026</div>`)[0];
+                popup_72cddb7c02d643717856ac6648cad773.setContent(html_be7e4a4a8aa1ab25414eb9951a80ad26);
+            
+        
+
+        marker_47f10ec696f26d7af70351e9248acc71.bindPopup(popup_72cddb7c02d643717856ac6648cad773)
+        ;
+
+        
+    
+    
+            marker_47f10ec696f26d7af70351e9248acc71.bindTooltip(
+                `<div>
+                     Base Hospital Akkaraipattu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_47f10ec696f26d7af70351e9248acc71.setIcon(icon_a5fd98fd9d300344daaaccce869d15a1);
+            
+    
+            var poly_line_e332e411d354fca1d27cc1939f647411 = L.polyline(
+                [[6.9271, 79.8612], [7.3989, 81.8281], [7.4136, 81.8239], [7.3769, 81.8458], [7.2181, 81.8494], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#9C27B0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#9C27B0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_e332e411d354fca1d27cc1939f647411.bindTooltip(
+                `<div>
+                     Trip #25: Eastern – Kalmunai, Sammanthurai & Akkaraipattu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_6531765d9122299bea8ac040b6077a19 = L.marker(
+                [8.5083, 80.495],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_7a7bfc4e18dc8dd944918ea3c94f7784 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3e2d2f52976d12591f6a28bff5ab8237 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_4434a4fcff330c110fbb6ed393bd917e = $(`<div id="html_4434a4fcff330c110fbb6ed393bd917e" style="width: 100.0%; height: 100.0%;"><b>Base Hospital Medawachchiya</b><br>Trip #26: Northern Sweep – Medawachchiya to Jaffna<br>05–08 Oct 2026</div>`)[0];
+                popup_3e2d2f52976d12591f6a28bff5ab8237.setContent(html_4434a4fcff330c110fbb6ed393bd917e);
+            
+        
+
+        marker_6531765d9122299bea8ac040b6077a19.bindPopup(popup_3e2d2f52976d12591f6a28bff5ab8237)
+        ;
+
+        
+    
+    
+            marker_6531765d9122299bea8ac040b6077a19.bindTooltip(
+                `<div>
+                     Base Hospital Medawachchiya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_6531765d9122299bea8ac040b6077a19.setIcon(icon_7a7bfc4e18dc8dd944918ea3c94f7784);
+            
+    
+            var marker_c6848c3b02852324ca7c371c022ca9ee = L.marker(
+                [8.7514, 80.4972],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_93eac552b224eac8bd5c19d972d423be = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_c621a6c2b689b174bf0e34ad299fd874 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d0a0410a17801821c5966a4c0c2b4aa9 = $(`<div id="html_d0a0410a17801821c5966a4c0c2b4aa9" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Vavuniya</b><br>Trip #26: Northern Sweep – Medawachchiya to Jaffna<br>05–08 Oct 2026</div>`)[0];
+                popup_c621a6c2b689b174bf0e34ad299fd874.setContent(html_d0a0410a17801821c5966a4c0c2b4aa9);
+            
+        
+
+        marker_c6848c3b02852324ca7c371c022ca9ee.bindPopup(popup_c621a6c2b689b174bf0e34ad299fd874)
+        ;
+
+        
+    
+    
+            marker_c6848c3b02852324ca7c371c022ca9ee.bindTooltip(
+                `<div>
+                     RDHS Office Vavuniya
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_c6848c3b02852324ca7c371c022ca9ee.setIcon(icon_93eac552b224eac8bd5c19d972d423be);
+            
+    
+            var marker_112a510233a54c7c35f835fb4a818290 = L.marker(
+                [9.3956, 80.4022],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_7866b6443830f775f8a53f517d9ae76a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2c75c86123c66374f5b4a447c25ecbeb = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_400ef304d9b1a579e13709ab7fa546af = $(`<div id="html_400ef304d9b1a579e13709ab7fa546af" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Kilinochchi</b><br>Trip #26: Northern Sweep – Medawachchiya to Jaffna<br>05–08 Oct 2026</div>`)[0];
+                popup_2c75c86123c66374f5b4a447c25ecbeb.setContent(html_400ef304d9b1a579e13709ab7fa546af);
+            
+        
+
+        marker_112a510233a54c7c35f835fb4a818290.bindPopup(popup_2c75c86123c66374f5b4a447c25ecbeb)
+        ;
+
+        
+    
+    
+            marker_112a510233a54c7c35f835fb4a818290.bindTooltip(
+                `<div>
+                     RDHS Office Kilinochchi
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_112a510233a54c7c35f835fb4a818290.setIcon(icon_7866b6443830f775f8a53f517d9ae76a);
+            
+    
+            var marker_2b233b5be39bae783ea984644fc56b1b = L.marker(
+                [9.2672, 80.8136],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_a01673a393982c62bd8fcc28676fe25e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_3c0f2c6212290cd8bd5511cf95ee0cc1 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_cfcc0f9a6922d601f6c2873e19cb36f2 = $(`<div id="html_cfcc0f9a6922d601f6c2873e19cb36f2" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Mullaitivu</b><br>Trip #26: Northern Sweep – Medawachchiya to Jaffna<br>05–08 Oct 2026</div>`)[0];
+                popup_3c0f2c6212290cd8bd5511cf95ee0cc1.setContent(html_cfcc0f9a6922d601f6c2873e19cb36f2);
+            
+        
+
+        marker_2b233b5be39bae783ea984644fc56b1b.bindPopup(popup_3c0f2c6212290cd8bd5511cf95ee0cc1)
+        ;
+
+        
+    
+    
+            marker_2b233b5be39bae783ea984644fc56b1b.bindTooltip(
+                `<div>
+                     RDHS Office Mullaitivu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2b233b5be39bae783ea984644fc56b1b.setIcon(icon_a01673a393982c62bd8fcc28676fe25e);
+            
+    
+            var marker_9b7e68810d22ad6b2aefaf54f0f2fd1b = L.marker(
+                [9.6615, 80.0255],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_f675acb8b8fbd5eeccae51f607cf6e0e = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_bb79750d4eed0a46094dfd5c32c37114 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_dd0d79518cac64705a3e9c9f4cc2438b = $(`<div id="html_dd0d79518cac64705a3e9c9f4cc2438b" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Jaffna</b><br>Trip #26: Northern Sweep – Medawachchiya to Jaffna<br>05–08 Oct 2026</div>`)[0];
+                popup_bb79750d4eed0a46094dfd5c32c37114.setContent(html_dd0d79518cac64705a3e9c9f4cc2438b);
+            
+        
+
+        marker_9b7e68810d22ad6b2aefaf54f0f2fd1b.bindPopup(popup_bb79750d4eed0a46094dfd5c32c37114)
+        ;
+
+        
+    
+    
+            marker_9b7e68810d22ad6b2aefaf54f0f2fd1b.bindTooltip(
+                `<div>
+                     RDHS Office Jaffna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_9b7e68810d22ad6b2aefaf54f0f2fd1b.setIcon(icon_f675acb8b8fbd5eeccae51f607cf6e0e);
+            
+    
+            var poly_line_a8b1083ad2bef63a5bb7c35b166a00c4 = L.polyline(
+                [[6.9271, 79.8612], [8.5083, 80.495], [8.7514, 80.4972], [9.3956, 80.4022], [9.2672, 80.8136], [9.6615, 80.0255], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#F44336", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#F44336", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_a8b1083ad2bef63a5bb7c35b166a00c4.bindTooltip(
+                `<div>
+                     Trip #26: Northern Sweep – Medawachchiya to Jaffna
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            var marker_dd66c97a26879fb25d4d58887b1df8cc = L.marker(
+                [8.9781, 79.9044],
+                {
+}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            var icon_72d0472f89fe8fb8f80482ffd9e9147a = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_21dd7dee95730afb84b65ea825cca111 = L.popup({
+  "maxWidth": 260,
+});
+
+        
+            
+                var html_d0c8e5f4b56a6ec274abba64804fb48a = $(`<div id="html_d0c8e5f4b56a6ec274abba64804fb48a" style="width: 100.0%; height: 100.0%;"><b>RDHS Office Mannar</b><br>Trip #27: Mannar<br>12–13 Oct 2026</div>`)[0];
+                popup_21dd7dee95730afb84b65ea825cca111.setContent(html_d0c8e5f4b56a6ec274abba64804fb48a);
+            
+        
+
+        marker_dd66c97a26879fb25d4d58887b1df8cc.bindPopup(popup_21dd7dee95730afb84b65ea825cca111)
+        ;
+
+        
+    
+    
+            marker_dd66c97a26879fb25d4d58887b1df8cc.bindTooltip(
+                `<div>
+                     RDHS Office Mannar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_dd66c97a26879fb25d4d58887b1df8cc.setIcon(icon_72d0472f89fe8fb8f80482ffd9e9147a);
+            
+    
+            var poly_line_7a6c0995c7d76f405fed6683a8b31b00 = L.polyline(
+                [[6.9271, 79.8612], [8.9781, 79.9044], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.55, "smoothFactor": 1.0, "stroke": true, "weight": 2}
+            ).addTo(map_06ace752d6e32eb570745546b8e14c2b);
+        
+    
+            poly_line_7a6c0995c7d76f405fed6683a8b31b00.bindTooltip(
+                `<div>
+                     Trip #27: Mannar
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+</script>
+</html>

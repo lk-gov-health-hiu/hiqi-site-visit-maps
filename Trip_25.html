@@ -1,0 +1,484 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_9645f7ca5f26b8dfefff6be864f412d7 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #9C27B0;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#9C27B0">Trip #25 — Eastern – Kalmunai, Sammanthurai & Akkaraipattu</b><br>
+      <span style="font-size:12px;color:#444">21–23 Sep 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div><div><span style="color:#6A1B9A">⬤</span> <b>Day 3</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_9645f7ca5f26b8dfefff6be864f412d7" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_9645f7ca5f26b8dfefff6be864f412d7 = L.map(
+                "map_9645f7ca5f26b8dfefff6be864f412d7",
+                {
+                    center: [7.266920000000001, 81.44167999999999],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 7,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_104cea782926272a532233669940210c = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_104cea782926272a532233669940210c.addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var marker_a44e750f6c64cc8e0b61af48f204a1ed = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var icon_152f4659eb35d9791bb96bfd97f3ac63 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ea4cafb71785a538ce86b952e0f86c9d = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_4081d200562c62aa7da5c4d4e62a75df = $(`<div id="html_4081d200562c62aa7da5c4d4e62a75df" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_ea4cafb71785a538ce86b952e0f86c9d.setContent(html_4081d200562c62aa7da5c4d4e62a75df);
+            
+        
+
+        marker_a44e750f6c64cc8e0b61af48f204a1ed.bindPopup(popup_ea4cafb71785a538ce86b952e0f86c9d)
+        ;
+
+        
+    
+    
+            marker_a44e750f6c64cc8e0b61af48f204a1ed.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a44e750f6c64cc8e0b61af48f204a1ed.setIcon(icon_152f4659eb35d9791bb96bfd97f3ac63);
+            
+    
+            var marker_85c3c2bf9841db03d3af3d79b2126f43 = L.marker(
+                [7.3989, 81.8281],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var icon_6bca75bd6dbff31cbbf663184fc16622 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_15be802d84ae7c47f743d7e8b2862bf5 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_e9afd3e5f583b6c921d3b623507a80c1 = $(`<div id="html_e9afd3e5f583b6c921d3b623507a80c1" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Kalmunai South AMH</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #25:</b> Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_15be802d84ae7c47f743d7e8b2862bf5.setContent(html_e9afd3e5f583b6c921d3b623507a80c1);
+            
+        
+
+        marker_85c3c2bf9841db03d3af3d79b2126f43.bindPopup(popup_15be802d84ae7c47f743d7e8b2862bf5)
+        ;
+
+        
+    
+    
+            marker_85c3c2bf9841db03d3af3d79b2126f43.bindTooltip(
+                `<div>
+                     Day 1: Base Hospital Kalmunai South AMH
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_85c3c2bf9841db03d3af3d79b2126f43.setIcon(icon_6bca75bd6dbff31cbbf663184fc16622);
+            
+    
+            var marker_5fd57637cdea3a4350e37d9b861a6303 = L.marker(
+                [7.3989, 81.8281],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var div_icon_f517ca076908eadf18bba5ed92616ea0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_5fd57637cdea3a4350e37d9b861a6303.setIcon(div_icon_f517ca076908eadf18bba5ed92616ea0);
+            
+    
+            var marker_2e38967a1e8a63d9c597d964703c7447 = L.marker(
+                [7.4136, 81.8239],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var icon_e98eda6f5e68f3ee066741145c2acfc9 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_29ca86a935ffb2c3e49d1cd05a7a5709 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_3d03ebb73e0dd1a1435fecbb9ae0d570 = $(`<div id="html_3d03ebb73e0dd1a1435fecbb9ae0d570" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Kalmunai</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #25:</b> Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_29ca86a935ffb2c3e49d1cd05a7a5709.setContent(html_3d03ebb73e0dd1a1435fecbb9ae0d570);
+            
+        
+
+        marker_2e38967a1e8a63d9c597d964703c7447.bindPopup(popup_29ca86a935ffb2c3e49d1cd05a7a5709)
+        ;
+
+        
+    
+    
+            marker_2e38967a1e8a63d9c597d964703c7447.bindTooltip(
+                `<div>
+                     Day 1: RDHS Office Kalmunai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_2e38967a1e8a63d9c597d964703c7447.setIcon(icon_e98eda6f5e68f3ee066741145c2acfc9);
+            
+    
+            var marker_f0ee860176f76cead4fe6fb07a3b6976 = L.marker(
+                [7.4136, 81.8239],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var div_icon_04fdcf7c26c5058732110a8b53a25f6b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_f0ee860176f76cead4fe6fb07a3b6976.setIcon(div_icon_04fdcf7c26c5058732110a8b53a25f6b);
+            
+    
+            var marker_008cea0dd736bbfc968e9e9b7763c757 = L.marker(
+                [7.3769, 81.8458],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var icon_f1aa3a3534615e42454f37c567a92db4 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_0ab93a3777965467cdcf049b256e992d = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_f5cb8b662c67431d99526af476a1729d = $(`<div id="html_f5cb8b662c67431d99526af476a1729d" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Sammanthurai</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #25:</b> Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_0ab93a3777965467cdcf049b256e992d.setContent(html_f5cb8b662c67431d99526af476a1729d);
+            
+        
+
+        marker_008cea0dd736bbfc968e9e9b7763c757.bindPopup(popup_0ab93a3777965467cdcf049b256e992d)
+        ;
+
+        
+    
+    
+            marker_008cea0dd736bbfc968e9e9b7763c757.bindTooltip(
+                `<div>
+                     Day 2: Base Hospital Sammanthurai
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_008cea0dd736bbfc968e9e9b7763c757.setIcon(icon_f1aa3a3534615e42454f37c567a92db4);
+            
+    
+            var marker_31a06d17f4774a28e25714ec40fd9df3 = L.marker(
+                [7.3769, 81.8458],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var div_icon_0dbda73da050f037d5042dbc592bcbb2 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_31a06d17f4774a28e25714ec40fd9df3.setIcon(div_icon_0dbda73da050f037d5042dbc592bcbb2);
+            
+    
+            var marker_3422fe3fc535266a270e475211e42b65 = L.marker(
+                [7.2181, 81.8494],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var icon_4bbb70badc484dd599fe6602eb45b527 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_ec1f266b30066ded2cc9c74a6c5320a6 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_c0320e97456499c97d1707059071320b = $(`<div id="html_c0320e97456499c97d1707059071320b" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Akkaraipattu</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #25:</b> Eastern – Kalmunai, Sammanthurai & Akkaraipattu<br>       <b>Day 3</b>     </div></div>`)[0];
+                popup_ec1f266b30066ded2cc9c74a6c5320a6.setContent(html_c0320e97456499c97d1707059071320b);
+            
+        
+
+        marker_3422fe3fc535266a270e475211e42b65.bindPopup(popup_ec1f266b30066ded2cc9c74a6c5320a6)
+        ;
+
+        
+    
+    
+            marker_3422fe3fc535266a270e475211e42b65.bindTooltip(
+                `<div>
+                     Day 3: Base Hospital Akkaraipattu
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_3422fe3fc535266a270e475211e42b65.setIcon(icon_4bbb70badc484dd599fe6602eb45b527);
+            
+    
+            var marker_fa8740145f1b28fb22f20c9ee85abb8c = L.marker(
+                [7.2181, 81.8494],
+                {
+}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            var div_icon_fc6ba4a8c2481071c8c2a111469ef67d = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#6A1B9A;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD3\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_fa8740145f1b28fb22f20c9ee85abb8c.setIcon(div_icon_fc6ba4a8c2481071c8c2a111469ef67d);
+            
+    
+            var poly_line_b2eed9f7c298131fd2571b7336de4858 = L.polyline(
+                [[6.9271, 79.8612], [7.3989, 81.8281], [7.4136, 81.8239], [7.3769, 81.8458], [7.2181, 81.8494], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#9C27B0", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#9C27B0", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            poly_line_b2eed9f7c298131fd2571b7336de4858.bindTooltip(
+                `<div>
+                     Trip #25 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_4a4007a158e48e25a05798aa498cbe55 = L.polyline.antPath(
+              [[6.9271, 79.8612], [7.3989, 81.8281], [7.4136, 81.8239], [7.3769, 81.8458], [7.2181, 81.8494], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#9C27B0",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#9C27B0",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_9645f7ca5f26b8dfefff6be864f412d7);
+        
+    
+            map_9645f7ca5f26b8dfefff6be864f412d7.fitBounds(
+                [[6.8771, 79.8112], [7.4636, 81.8994]],
+                {}
+            );
+        
+</script>
+</html>

@@ -1,0 +1,352 @@
+<!DOCTYPE html>
+<html>
+<head>
+    
+    <meta http-equiv="content-type" content="text/html; charset=UTF-8" />
+    <script src="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.js"></script>
+    <script src="https://code.jquery.com/jquery-3.7.1.min.js"></script>
+    <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/js/bootstrap.bundle.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.js"></script>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/leaflet@1.9.3/dist/leaflet.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/bootstrap@5.2.2/dist/css/bootstrap.min.css"/>
+    <link rel="stylesheet" href="https://netdna.bootstrapcdn.com/bootstrap/3.0.0/css/bootstrap-glyphicons.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/npm/@fortawesome/fontawesome-free@6.2.0/css/all.min.css"/>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/Leaflet.awesome-markers/2.0.2/leaflet.awesome-markers.css"/>
+    <link rel="stylesheet" href="https://cdn.jsdelivr.net/gh/python-visualization/folium/folium/templates/leaflet.awesome.rotate.min.css"/>
+    
+            <meta name="viewport" content="width=device-width,
+                initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
+            <style>
+                #map_ddf78b74cd359398559bf3d5a687ec46 {
+                    position: relative;
+                    width: 100.0%;
+                    height: 100.0%;
+                    left: 0.0%;
+                    top: 0.0%;
+                }
+                .leaflet-container { font-size: 1rem; }
+            </style>
+
+            <style>html, body {
+                width: 100%;
+                height: 100%;
+                margin: 0;
+                padding: 0;
+            }
+            </style>
+
+            <style>#map {
+                position:absolute;
+                top:0;
+                bottom:0;
+                right:0;
+                left:0;
+                }
+            </style>
+
+            <script>
+                L_NO_TOUCH = false;
+                L_DISABLE_3D = false;
+            </script>
+
+        
+    <script src="https://cdn.jsdelivr.net/npm/leaflet-ant-path@1.1.2/dist/leaflet-ant-path.min.js"></script>
+</head>
+<body>
+    
+    
+    <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
+                padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
+                box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
+      <b style="font-size:15px;color:#FF9800">Trip #17 — Galgamuwa & Puttalam</b><br>
+      <span style="font-size:12px;color:#444">20–21 Jul 2026</span>
+    </div>
+    
+    <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
+                padding:10px 14px;border-radius:8px;border:1px solid #ccc;
+                box-shadow:2px 2px 6px rgba(0,0,0,.2);font-family:Arial;font-size:13px">
+      <b>Legend</b><br>
+      <span style="color:#E53935">★</span> Colombo (Base)<br>
+      <span style="color:#1E88E5">✚</span> Hospital<br>
+      <span style="color:#43A047">■</span> RDHS Office<br>
+      <hr style="margin:4px 0">
+      <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
+    </div>
+    
+            <div class="folium-map" id="map_ddf78b74cd359398559bf3d5a687ec46" ></div>
+        
+</body>
+<script>
+    
+    
+            var map_ddf78b74cd359398559bf3d5a687ec46 = L.map(
+                "map_ddf78b74cd359398559bf3d5a687ec46",
+                {
+                    center: [7.663133333333334, 80.00806666666666],
+                    crs: L.CRS.EPSG3857,
+                    ...{
+  "zoom": 8,
+  "zoomControl": true,
+  "preferCanvas": false,
+}
+
+                }
+            );
+
+            
+
+        
+    
+            var tile_layer_1373de9bf423abc1804259dfea6a4d25 = L.tileLayer(
+                "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
+                {
+  "minZoom": 0,
+  "maxZoom": 19,
+  "maxNativeZoom": 19,
+  "noWrap": false,
+  "attribution": "\u0026copy; \u003ca href=\"https://www.openstreetmap.org/copyright\"\u003eOpenStreetMap\u003c/a\u003e contributors",
+  "subdomains": "abc",
+  "detectRetina": false,
+  "tms": false,
+  "opacity": 1,
+}
+
+            );
+        
+    
+            tile_layer_1373de9bf423abc1804259dfea6a4d25.addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            var marker_a034be040f7eb8bd727b970815dca00b = L.marker(
+                [6.9271, 79.8612],
+                {
+}
+            ).addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            var icon_91863a1039f612dc36c49c8882881b99 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "red",
+  "iconColor": "white",
+  "icon": "star",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_f14b206dab0159656b81406bdde0cf3e = L.popup({
+  "maxWidth": 200,
+});
+
+        
+            
+                var html_82fe83c7b2e15dc1358755afb7c81019 = $(`<div id="html_82fe83c7b2e15dc1358755afb7c81019" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_f14b206dab0159656b81406bdde0cf3e.setContent(html_82fe83c7b2e15dc1358755afb7c81019);
+            
+        
+
+        marker_a034be040f7eb8bd727b970815dca00b.bindPopup(popup_f14b206dab0159656b81406bdde0cf3e)
+        ;
+
+        
+    
+    
+            marker_a034be040f7eb8bd727b970815dca00b.bindTooltip(
+                `<div>
+                     Colombo (Base)
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_a034be040f7eb8bd727b970815dca00b.setIcon(icon_91863a1039f612dc36c49c8882881b99);
+            
+    
+            var marker_118a30da9c19bfc5f0c084d3edf2471f = L.marker(
+                [8.0317, 80.3233],
+                {
+}
+            ).addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            var icon_36a844634383139c2e0aadecfa8a55e5 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_72ee1010f9530948069adcfecd74a5e2 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_cd983e7fe23527588c6d205771c3656f = $(`<div id="html_cd983e7fe23527588c6d205771c3656f" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Galgamuwa</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #17:</b> Galgamuwa & Puttalam<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_72ee1010f9530948069adcfecd74a5e2.setContent(html_cd983e7fe23527588c6d205771c3656f);
+            
+        
+
+        marker_118a30da9c19bfc5f0c084d3edf2471f.bindPopup(popup_72ee1010f9530948069adcfecd74a5e2)
+        ;
+
+        
+    
+    
+            marker_118a30da9c19bfc5f0c084d3edf2471f.bindTooltip(
+                `<div>
+                     Day 1: Base Hospital Galgamuwa
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_118a30da9c19bfc5f0c084d3edf2471f.setIcon(icon_36a844634383139c2e0aadecfa8a55e5);
+            
+    
+            var marker_45ded2779a80eeb6678052e6a20a33ed = L.marker(
+                [8.0317, 80.3233],
+                {
+}
+            ).addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            var div_icon_015d3c1f640f20f9be81e4cfc577fc45 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_45ded2779a80eeb6678052e6a20a33ed.setIcon(div_icon_015d3c1f640f20f9be81e4cfc577fc45);
+            
+    
+            var marker_65866bd9b55c5f58c2be30ea0d69f035 = L.marker(
+                [8.0306, 79.8397],
+                {
+}
+            ).addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            var icon_0fccbbce580c357bf4895f78380eee43 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "green",
+  "iconColor": "white",
+  "icon": "building",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_d1b32f591a96e2f6ffbe9d31a4e94043 = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_21e5cb4ab45a6b1cf0fa0f639f7f4d41 = $(`<div id="html_21e5cb4ab45a6b1cf0fa0f639f7f4d41" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Puttalam</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #17:</b> Galgamuwa & Puttalam<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_d1b32f591a96e2f6ffbe9d31a4e94043.setContent(html_21e5cb4ab45a6b1cf0fa0f639f7f4d41);
+            
+        
+
+        marker_65866bd9b55c5f58c2be30ea0d69f035.bindPopup(popup_d1b32f591a96e2f6ffbe9d31a4e94043)
+        ;
+
+        
+    
+    
+            marker_65866bd9b55c5f58c2be30ea0d69f035.bindTooltip(
+                `<div>
+                     Day 2: RDHS Office Puttalam
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+                marker_65866bd9b55c5f58c2be30ea0d69f035.setIcon(icon_0fccbbce580c357bf4895f78380eee43);
+            
+    
+            var marker_16e3d0dfb1366168094ccce16c884548 = L.marker(
+                [8.0306, 79.8397],
+                {
+}
+            ).addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            var div_icon_426d7e278a7dea4f23e5f0740f1f4db0 = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_16e3d0dfb1366168094ccce16c884548.setIcon(div_icon_426d7e278a7dea4f23e5f0740f1f4db0);
+            
+    
+            var poly_line_e7e66ec7a76cd4dd470e4e1ffc34f19c = L.polyline(
+                [[6.9271, 79.8612], [8.0317, 80.3233], [8.0306, 79.8397], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            poly_line_e7e66ec7a76cd4dd470e4e1ffc34f19c.bindTooltip(
+                `<div>
+                     Trip #17 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_33cc8e2a8e5af276e673b3cabdee22bd = L.polyline.antPath(
+              [[6.9271, 79.8612], [8.0317, 80.3233], [8.0306, 79.8397], [6.9271, 79.8612]],
+              {
+  "stroke": true,
+  "color": "#FF9800",
+  "weight": 3,
+  "opacity": 0.5,
+  "lineCap": "round",
+  "lineJoin": "round",
+  "dashArray": [
+10,
+20,
+],
+  "dashOffset": null,
+  "fill": false,
+  "fillColor": "#FF9800",
+  "fillOpacity": 0.2,
+  "fillRule": "evenodd",
+  "bubblingMouseEvents": true,
+  "smoothFactor": 1.0,
+  "noClip": false,
+  "paused": false,
+  "reverse": false,
+  "hardwareAcceleration": false,
+  "delay": 1200,
+  "pulseColor": "#FFFFFF",
+}
+        ).addTo(map_ddf78b74cd359398559bf3d5a687ec46);
+        
+    
+            map_ddf78b74cd359398559bf3d5a687ec46.fitBounds(
+                [[6.8771, 79.7897], [8.081700000000001, 80.3733]],
+                {}
+            );
+        
+</script>
+</html>
