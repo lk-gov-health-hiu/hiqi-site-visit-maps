@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_e999670603eb61534566e3c12d52b02a {
+                #map_e13b647f7a79c3d43b18c859bdc89220 {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,8 +58,8 @@
     <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
                 padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
                 box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
-      <b style="font-size:15px;color:#FF9800">Trip #17 — Galgamuwa & Puttalam</b><br>
-      <span style="font-size:12px;color:#444">20–21 Jul 2026</span>
+      <b style="font-size:15px;color:#FF9800">Visit #16 — Embilipitiya & Hambantota</b><br>
+      <span style="font-size:12px;color:#444">13–14 Jul 2026</span>
     </div>
     
     <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
@@ -73,16 +73,16 @@
       <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div><div><span style="color:#2E7D32">⬤</span> <b>Day 2</b></div>
     </div>
     
-            <div class="folium-map" id="map_e999670603eb61534566e3c12d52b02a" ></div>
+            <div class="folium-map" id="map_e13b647f7a79c3d43b18c859bdc89220" ></div>
         
 </body>
 <script>
     
     
-            var map_e999670603eb61534566e3c12d52b02a = L.map(
-                "map_e999670603eb61534566e3c12d52b02a",
+            var map_e13b647f7a79c3d43b18c859bdc89220 = L.map(
+                "map_e13b647f7a79c3d43b18c859bdc89220",
                 {
-                    center: [7.663133333333334, 80.00806666666666],
+                    center: [6.464033333333333, 80.6088],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 8,
@@ -97,7 +97,7 @@
 
         
     
-            var tile_layer_1ba56b35ed65ff3741f33463c305c63e = L.tileLayer(
+            var tile_layer_f6d6553a0eaca3937ba15234cef33b9f = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -114,17 +114,17 @@
             );
         
     
-            tile_layer_1ba56b35ed65ff3741f33463c305c63e.addTo(map_e999670603eb61534566e3c12d52b02a);
+            tile_layer_f6d6553a0eaca3937ba15234cef33b9f.addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            var marker_5d8d8d21ec114e2f0a2af87a35128482 = L.marker(
+            var marker_dca4d49e1ab1b572708dc321dfb7bb66 = L.marker(
                 [6.9271, 79.8612],
                 {
 }
-            ).addTo(map_e999670603eb61534566e3c12d52b02a);
+            ).addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            var icon_c7c7de51bb1836e860454d5d04137ecf = L.AwesomeMarkers.icon(
+            var icon_1732047338e20767b98b2c178aa1eade = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -135,24 +135,24 @@
             );
         
     
-        var popup_46330b3b458100d8c89d86aa21c3da59 = L.popup({
+        var popup_c46295e2aca42a09071f283e28e3db85 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_db68b72e9aa20e1cf6a363049274f950 = $(`<div id="html_db68b72e9aa20e1cf6a363049274f950" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
-                popup_46330b3b458100d8c89d86aa21c3da59.setContent(html_db68b72e9aa20e1cf6a363049274f950);
+                var html_b89b8ca568fcc84c30e4c5c4ba449d63 = $(`<div id="html_b89b8ca568fcc84c30e4c5c4ba449d63" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_c46295e2aca42a09071f283e28e3db85.setContent(html_b89b8ca568fcc84c30e4c5c4ba449d63);
             
         
 
-        marker_5d8d8d21ec114e2f0a2af87a35128482.bindPopup(popup_46330b3b458100d8c89d86aa21c3da59)
+        marker_dca4d49e1ab1b572708dc321dfb7bb66.bindPopup(popup_c46295e2aca42a09071f283e28e3db85)
         ;
 
         
     
     
-            marker_5d8d8d21ec114e2f0a2af87a35128482.bindTooltip(
+            marker_dca4d49e1ab1b572708dc321dfb7bb66.bindTooltip(
                 `<div>
                      Colombo (Base)
                  </div>`,
@@ -162,17 +162,17 @@
             );
         
     
-                marker_5d8d8d21ec114e2f0a2af87a35128482.setIcon(icon_c7c7de51bb1836e860454d5d04137ecf);
+                marker_dca4d49e1ab1b572708dc321dfb7bb66.setIcon(icon_1732047338e20767b98b2c178aa1eade);
             
     
-            var marker_e4567fdcaacf5afce77574e3bea83df5 = L.marker(
-                [8.0317, 80.3233],
+            var marker_12a5a23ae238301253d68d83eb8da59e = L.marker(
+                [6.3411, 80.8469],
                 {
 }
-            ).addTo(map_e999670603eb61534566e3c12d52b02a);
+            ).addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            var icon_f8d04402e0c1c09e614fb33394c23266 = L.AwesomeMarkers.icon(
+            var icon_837a7f58fd66f88c268e34879c2a7df7 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -183,26 +183,26 @@
             );
         
     
-        var popup_8823ffe54f4155e1aedd9ad574c2da24 = L.popup({
+        var popup_e10337d643f24b2ad18347e7fddafe24 = L.popup({
   "maxWidth": 280,
 });
 
         
             
-                var html_debaec31364562cae2b5b8c9a80fa860 = $(`<div id="html_debaec31364562cae2b5b8c9a80fa860" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Galgamuwa</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #17:</b> Galgamuwa & Puttalam<br>       <b>Day 1</b>     </div></div>`)[0];
-                popup_8823ffe54f4155e1aedd9ad574c2da24.setContent(html_debaec31364562cae2b5b8c9a80fa860);
+                var html_f90c12b8fc5fb73db13152fa566790b7 = $(`<div id="html_f90c12b8fc5fb73db13152fa566790b7" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">District General Hospital Embilipitiya</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Visit #16:</b> Embilipitiya & Hambantota<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_e10337d643f24b2ad18347e7fddafe24.setContent(html_f90c12b8fc5fb73db13152fa566790b7);
             
         
 
-        marker_e4567fdcaacf5afce77574e3bea83df5.bindPopup(popup_8823ffe54f4155e1aedd9ad574c2da24)
+        marker_12a5a23ae238301253d68d83eb8da59e.bindPopup(popup_e10337d643f24b2ad18347e7fddafe24)
         ;
 
         
     
     
-            marker_e4567fdcaacf5afce77574e3bea83df5.bindTooltip(
+            marker_12a5a23ae238301253d68d83eb8da59e.bindTooltip(
                 `<div>
-                     Day 1: Base Hospital Galgamuwa
+                     Day 1: District General Hospital Embilipitiya
                  </div>`,
                 {
   "sticky": true,
@@ -210,17 +210,17 @@
             );
         
     
-                marker_e4567fdcaacf5afce77574e3bea83df5.setIcon(icon_f8d04402e0c1c09e614fb33394c23266);
+                marker_12a5a23ae238301253d68d83eb8da59e.setIcon(icon_837a7f58fd66f88c268e34879c2a7df7);
             
     
-            var marker_535d463594dc786f364a5b67aa5dcee6 = L.marker(
-                [8.0317, 80.3233],
+            var marker_d288ff39fc82ae9c99d3911b0b0df507 = L.marker(
+                [6.3411, 80.8469],
                 {
 }
-            ).addTo(map_e999670603eb61534566e3c12d52b02a);
+            ).addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            var div_icon_caa5f0144985ea04ca910a0e50a81ac8 = L.divIcon({
+            var div_icon_e62a6e13313c50aed0f305c7b750139a = L.divIcon({
   "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
   "iconSize": [30, 20],
   "iconAnchor": [0, 0],
@@ -228,17 +228,17 @@
 });
         
     
-                marker_535d463594dc786f364a5b67aa5dcee6.setIcon(div_icon_caa5f0144985ea04ca910a0e50a81ac8);
+                marker_d288ff39fc82ae9c99d3911b0b0df507.setIcon(div_icon_e62a6e13313c50aed0f305c7b750139a);
             
     
-            var marker_29d4ee3f905402000e43cb9689550c57 = L.marker(
-                [8.0306, 79.8397],
+            var marker_8ceac8b861a579aeca2419f10ff347c5 = L.marker(
+                [6.1239, 81.1183],
                 {
 }
-            ).addTo(map_e999670603eb61534566e3c12d52b02a);
+            ).addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            var icon_6333a26960413e3fb542ccb2db9bceb4 = L.AwesomeMarkers.icon(
+            var icon_5b5e6f2fdbc00e3aa9274909477f9c69 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "green",
   "iconColor": "white",
@@ -249,26 +249,26 @@
             );
         
     
-        var popup_03ebebc5d20d8d7dfdca69bde31f69ef = L.popup({
+        var popup_f4c1d93e140c46e5eeffd8f842932674 = L.popup({
   "maxWidth": 280,
 });
 
         
             
-                var html_920e07ab3680496a8ead521efa5a1480 = $(`<div id="html_920e07ab3680496a8ead521efa5a1480" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Puttalam</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Trip #17:</b> Galgamuwa & Puttalam<br>       <b>Day 2</b>     </div></div>`)[0];
-                popup_03ebebc5d20d8d7dfdca69bde31f69ef.setContent(html_920e07ab3680496a8ead521efa5a1480);
+                var html_25610b705eef8e758e67cfdf02478270 = $(`<div id="html_25610b705eef8e758e67cfdf02478270" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Hambantota</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Visit #16:</b> Embilipitiya & Hambantota<br>       <b>Day 2</b>     </div></div>`)[0];
+                popup_f4c1d93e140c46e5eeffd8f842932674.setContent(html_25610b705eef8e758e67cfdf02478270);
             
         
 
-        marker_29d4ee3f905402000e43cb9689550c57.bindPopup(popup_03ebebc5d20d8d7dfdca69bde31f69ef)
+        marker_8ceac8b861a579aeca2419f10ff347c5.bindPopup(popup_f4c1d93e140c46e5eeffd8f842932674)
         ;
 
         
     
     
-            marker_29d4ee3f905402000e43cb9689550c57.bindTooltip(
+            marker_8ceac8b861a579aeca2419f10ff347c5.bindTooltip(
                 `<div>
-                     Day 2: RDHS Office Puttalam
+                     Day 2: RDHS Office Hambantota
                  </div>`,
                 {
   "sticky": true,
@@ -276,17 +276,17 @@
             );
         
     
-                marker_29d4ee3f905402000e43cb9689550c57.setIcon(icon_6333a26960413e3fb542ccb2db9bceb4);
+                marker_8ceac8b861a579aeca2419f10ff347c5.setIcon(icon_5b5e6f2fdbc00e3aa9274909477f9c69);
             
     
-            var marker_0aadc736dc4fad2eb2e81f45b88e89c9 = L.marker(
-                [8.0306, 79.8397],
+            var marker_7472119e722e16a10eac6107f6f3e019 = L.marker(
+                [6.1239, 81.1183],
                 {
 }
-            ).addTo(map_e999670603eb61534566e3c12d52b02a);
+            ).addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            var div_icon_99bcf50cb9a282a3a92fa83e0e1cf769 = L.divIcon({
+            var div_icon_582a90cda6c53652c03a28cec5582249 = L.divIcon({
   "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#2E7D32;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD2\u003c/div\u003e",
   "iconSize": [30, 20],
   "iconAnchor": [0, 0],
@@ -294,18 +294,18 @@
 });
         
     
-                marker_0aadc736dc4fad2eb2e81f45b88e89c9.setIcon(div_icon_99bcf50cb9a282a3a92fa83e0e1cf769);
+                marker_7472119e722e16a10eac6107f6f3e019.setIcon(div_icon_582a90cda6c53652c03a28cec5582249);
             
     
-            var poly_line_3b0bffd13e24ced1cea7c2aafc34b898 = L.polyline(
-                [[6.9271, 79.8612], [8.0317, 80.3233], [8.0306, 79.8397], [6.9271, 79.8612]],
+            var poly_line_334afda6d52e10df8e70f8f4cf4cf841 = L.polyline(
+                [[6.9271, 79.8612], [6.3411, 80.8469], [6.1239, 81.1183], [6.9271, 79.8612]],
                 {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_e999670603eb61534566e3c12d52b02a);
+            ).addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            poly_line_3b0bffd13e24ced1cea7c2aafc34b898.bindTooltip(
+            poly_line_334afda6d52e10df8e70f8f4cf4cf841.bindTooltip(
                 `<div>
-                     Trip #17 route
+                     Visit #16 route
                  </div>`,
                 {
   "sticky": true,
@@ -313,8 +313,8 @@
             );
         
     
-            ant_path_41865c94a9014bcfbb983fc1e3e590a0 = L.polyline.antPath(
-              [[6.9271, 79.8612], [8.0317, 80.3233], [8.0306, 79.8397], [6.9271, 79.8612]],
+            ant_path_26d483be63de9ed5c7d384a879b608c1 = L.polyline.antPath(
+              [[6.9271, 79.8612], [6.3411, 80.8469], [6.1239, 81.1183], [6.9271, 79.8612]],
               {
   "stroke": true,
   "color": "#FF9800",
@@ -340,11 +340,11 @@
   "delay": 1200,
   "pulseColor": "#FFFFFF",
 }
-        ).addTo(map_e999670603eb61534566e3c12d52b02a);
+        ).addTo(map_e13b647f7a79c3d43b18c859bdc89220);
         
     
-            map_e999670603eb61534566e3c12d52b02a.fitBounds(
-                [[6.8771, 79.7897], [8.081700000000001, 80.3733]],
+            map_e13b647f7a79c3d43b18c859bdc89220.fitBounds(
+                [[6.0739, 79.8112], [6.9771, 81.1683]],
                 {}
             );
         

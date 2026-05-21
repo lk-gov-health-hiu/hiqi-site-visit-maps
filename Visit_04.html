@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_3f2fd5f6d0e2dd992a6a9fd681da79e5 {
+                #map_5857a35fbdf992b336141f59c819dacc {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -58,8 +58,8 @@
     <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
                 padding:10px 16px;border-radius:8px;border:2px solid #2196F3;
                 box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
-      <b style="font-size:15px;color:#2196F3">Trip #9 — Base Hospital Dambadeniya</b><br>
-      <span style="font-size:12px;color:#444">11 Jun 2026 (Thu)</span>
+      <b style="font-size:15px;color:#2196F3">Visit #4 — Ragama & Welisara</b><br>
+      <span style="font-size:12px;color:#444">04 Jun 2026 (Thu)</span>
     </div>
     
     <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
@@ -73,16 +73,16 @@
       <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div>
     </div>
     
-            <div class="folium-map" id="map_3f2fd5f6d0e2dd992a6a9fd681da79e5" ></div>
+            <div class="folium-map" id="map_5857a35fbdf992b336141f59c819dacc" ></div>
         
 </body>
 <script>
     
     
-            var map_3f2fd5f6d0e2dd992a6a9fd681da79e5 = L.map(
-                "map_3f2fd5f6d0e2dd992a6a9fd681da79e5",
+            var map_5857a35fbdf992b336141f59c819dacc = L.map(
+                "map_5857a35fbdf992b336141f59c819dacc",
                 {
-                    center: [7.1094, 79.9649],
+                    center: [6.9938666666666665, 79.8964],
                     crs: L.CRS.EPSG3857,
                     ...{
   "zoom": 10,
@@ -97,7 +97,7 @@
 
         
     
-            var tile_layer_5356e49dcceb7c089e506938a468bb41 = L.tileLayer(
+            var tile_layer_59cd91da8f786b563813e3dade6368aa = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -114,17 +114,17 @@
             );
         
     
-            tile_layer_5356e49dcceb7c089e506938a468bb41.addTo(map_3f2fd5f6d0e2dd992a6a9fd681da79e5);
+            tile_layer_59cd91da8f786b563813e3dade6368aa.addTo(map_5857a35fbdf992b336141f59c819dacc);
         
     
-            var marker_5af490df6d6aab1c7a41e01165f5acef = L.marker(
+            var marker_a29c1baa2c03dd4b5a3c2c029e30175e = L.marker(
                 [6.9271, 79.8612],
                 {
 }
-            ).addTo(map_3f2fd5f6d0e2dd992a6a9fd681da79e5);
+            ).addTo(map_5857a35fbdf992b336141f59c819dacc);
         
     
-            var icon_59857e8f97c76c785c5b9192053b1a5f = L.AwesomeMarkers.icon(
+            var icon_f03dd863b53e076fcf0b4e578fee5359 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -135,24 +135,24 @@
             );
         
     
-        var popup_f8fdadfab6f6743ddddd70d40442f1dc = L.popup({
+        var popup_b9f5d2f8182bd7360002310762405b07 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_a37d190caa9aaaafdb54373a25bfbbe2 = $(`<div id="html_a37d190caa9aaaafdb54373a25bfbbe2" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
-                popup_f8fdadfab6f6743ddddd70d40442f1dc.setContent(html_a37d190caa9aaaafdb54373a25bfbbe2);
+                var html_24e46fc78d27d4fb55a1f6fe259df51d = $(`<div id="html_24e46fc78d27d4fb55a1f6fe259df51d" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_b9f5d2f8182bd7360002310762405b07.setContent(html_24e46fc78d27d4fb55a1f6fe259df51d);
             
         
 
-        marker_5af490df6d6aab1c7a41e01165f5acef.bindPopup(popup_f8fdadfab6f6743ddddd70d40442f1dc)
+        marker_a29c1baa2c03dd4b5a3c2c029e30175e.bindPopup(popup_b9f5d2f8182bd7360002310762405b07)
         ;
 
         
     
     
-            marker_5af490df6d6aab1c7a41e01165f5acef.bindTooltip(
+            marker_a29c1baa2c03dd4b5a3c2c029e30175e.bindTooltip(
                 `<div>
                      Colombo (Base)
                  </div>`,
@@ -162,17 +162,17 @@
             );
         
     
-                marker_5af490df6d6aab1c7a41e01165f5acef.setIcon(icon_59857e8f97c76c785c5b9192053b1a5f);
+                marker_a29c1baa2c03dd4b5a3c2c029e30175e.setIcon(icon_f03dd863b53e076fcf0b4e578fee5359);
             
     
-            var marker_f52b17ab9632332158974975514b65f2 = L.marker(
-                [7.2917, 80.0686],
+            var marker_0f3e00c2814df8dc6924365e1f13a5ec = L.marker(
+                [7.0285, 79.921],
                 {
 }
-            ).addTo(map_3f2fd5f6d0e2dd992a6a9fd681da79e5);
+            ).addTo(map_5857a35fbdf992b336141f59c819dacc);
         
     
-            var icon_23aaafd24c913b469c8109277453482c = L.AwesomeMarkers.icon(
+            var icon_84b6a113dd9865798265346534539ba2 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "blue",
   "iconColor": "white",
@@ -183,26 +183,26 @@
             );
         
     
-        var popup_bb3efc113847b5517b6527323159b264 = L.popup({
+        var popup_2a818dca7506d5c6c54465e746fa45f9 = L.popup({
   "maxWidth": 280,
 });
 
         
             
-                var html_a3d01de5a80855e29a63d26801468fe4 = $(`<div id="html_a3d01de5a80855e29a63d26801468fe4" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Dambadeniya</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #9:</b> Base Hospital Dambadeniya<br>       <b>Day 1</b>     </div></div>`)[0];
-                popup_bb3efc113847b5517b6527323159b264.setContent(html_a3d01de5a80855e29a63d26801468fe4);
+                var html_7294cb1e3d0faf81b087a869d23900fa = $(`<div id="html_7294cb1e3d0faf81b087a869d23900fa" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Rehabilitation Hospital Ragama</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Visit #4:</b> Ragama & Welisara<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_2a818dca7506d5c6c54465e746fa45f9.setContent(html_7294cb1e3d0faf81b087a869d23900fa);
             
         
 
-        marker_f52b17ab9632332158974975514b65f2.bindPopup(popup_bb3efc113847b5517b6527323159b264)
+        marker_0f3e00c2814df8dc6924365e1f13a5ec.bindPopup(popup_2a818dca7506d5c6c54465e746fa45f9)
         ;
 
         
     
     
-            marker_f52b17ab9632332158974975514b65f2.bindTooltip(
+            marker_0f3e00c2814df8dc6924365e1f13a5ec.bindTooltip(
                 `<div>
-                     Day 1: Base Hospital Dambadeniya
+                     Day 1: Rehabilitation Hospital Ragama
                  </div>`,
                 {
   "sticky": true,
@@ -210,17 +210,17 @@
             );
         
     
-                marker_f52b17ab9632332158974975514b65f2.setIcon(icon_23aaafd24c913b469c8109277453482c);
+                marker_0f3e00c2814df8dc6924365e1f13a5ec.setIcon(icon_84b6a113dd9865798265346534539ba2);
             
     
-            var marker_135a1d518f89351eb8e2ac46dc27d478 = L.marker(
-                [7.2917, 80.0686],
+            var marker_a92497c27c690868eda2d5407a79d8eb = L.marker(
+                [7.0285, 79.921],
                 {
 }
-            ).addTo(map_3f2fd5f6d0e2dd992a6a9fd681da79e5);
+            ).addTo(map_5857a35fbdf992b336141f59c819dacc);
         
     
-            var div_icon_93365507751aab97a41dd6ac4e531570 = L.divIcon({
+            var div_icon_23cd9811e91d3f086d835e1ffa416d67 = L.divIcon({
   "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
   "iconSize": [30, 20],
   "iconAnchor": [0, 0],
@@ -228,18 +228,47 @@
 });
         
     
-                marker_135a1d518f89351eb8e2ac46dc27d478.setIcon(div_icon_93365507751aab97a41dd6ac4e531570);
+                marker_a92497c27c690868eda2d5407a79d8eb.setIcon(div_icon_23cd9811e91d3f086d835e1ffa416d67);
             
     
-            var poly_line_0c7c092b91229e81eaabef3a51825ae0 = L.polyline(
-                [[6.9271, 79.8612], [7.2917, 80.0686], [6.9271, 79.8612]],
-                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_3f2fd5f6d0e2dd992a6a9fd681da79e5);
+            var marker_22133cdf2f73db706eee7d048cd4b6e8 = L.marker(
+                [7.026, 79.907],
+                {
+}
+            ).addTo(map_5857a35fbdf992b336141f59c819dacc);
         
     
-            poly_line_0c7c092b91229e81eaabef3a51825ae0.bindTooltip(
+            var icon_819033e28c9df4497228ff3fad425938 = L.AwesomeMarkers.icon(
+                {
+  "markerColor": "blue",
+  "iconColor": "white",
+  "icon": "plus-square",
+  "prefix": "fa",
+  "extraClasses": "fa-rotate-0",
+}
+            );
+        
+    
+        var popup_2fcf5bf8710bce2472d0ca1ddd2a818f = L.popup({
+  "maxWidth": 280,
+});
+
+        
+            
+                var html_0cec5a071d7007720d635d8d42e840f7 = $(`<div id="html_0cec5a071d7007720d635d8d42e840f7" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">National Hospital for Respiratory Diseases Welisara</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Visit #4:</b> Ragama & Welisara<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_2fcf5bf8710bce2472d0ca1ddd2a818f.setContent(html_0cec5a071d7007720d635d8d42e840f7);
+            
+        
+
+        marker_22133cdf2f73db706eee7d048cd4b6e8.bindPopup(popup_2fcf5bf8710bce2472d0ca1ddd2a818f)
+        ;
+
+        
+    
+    
+            marker_22133cdf2f73db706eee7d048cd4b6e8.bindTooltip(
                 `<div>
-                     Trip #9 route
+                     Day 1: National Hospital for Respiratory Diseases Welisara
                  </div>`,
                 {
   "sticky": true,
@@ -247,8 +276,45 @@
             );
         
     
-            ant_path_ba498c7b61dac20e5d07bfb317c1f90b = L.polyline.antPath(
-              [[6.9271, 79.8612], [7.2917, 80.0686], [6.9271, 79.8612]],
+                marker_22133cdf2f73db706eee7d048cd4b6e8.setIcon(icon_819033e28c9df4497228ff3fad425938);
+            
+    
+            var marker_eee3a0225546cdfd1c8b20b2b165875e = L.marker(
+                [7.026, 79.907],
+                {
+}
+            ).addTo(map_5857a35fbdf992b336141f59c819dacc);
+        
+    
+            var div_icon_5c2964418f2ab89bf20c01f79468d50b = L.divIcon({
+  "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
+  "iconSize": [30, 20],
+  "iconAnchor": [0, 0],
+  "className": "empty",
+});
+        
+    
+                marker_eee3a0225546cdfd1c8b20b2b165875e.setIcon(div_icon_5c2964418f2ab89bf20c01f79468d50b);
+            
+    
+            var poly_line_51317f3f6043430d8b4bbf917b5b78ce = L.polyline(
+                [[6.9271, 79.8612], [7.0285, 79.921], [7.026, 79.907], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_5857a35fbdf992b336141f59c819dacc);
+        
+    
+            poly_line_51317f3f6043430d8b4bbf917b5b78ce.bindTooltip(
+                `<div>
+                     Visit #4 route
+                 </div>`,
+                {
+  "sticky": true,
+}
+            );
+        
+    
+            ant_path_6892e34031d09f15ce7be7523c2a6268 = L.polyline.antPath(
+              [[6.9271, 79.8612], [7.0285, 79.921], [7.026, 79.907], [6.9271, 79.8612]],
               {
   "stroke": true,
   "color": "#2196F3",
@@ -274,11 +340,11 @@
   "delay": 1200,
   "pulseColor": "#FFFFFF",
 }
-        ).addTo(map_3f2fd5f6d0e2dd992a6a9fd681da79e5);
+        ).addTo(map_5857a35fbdf992b336141f59c819dacc);
         
     
-            map_3f2fd5f6d0e2dd992a6a9fd681da79e5.fitBounds(
-                [[6.8771, 79.8112], [7.3416999999999994, 80.1186]],
+            map_5857a35fbdf992b336141f59c819dacc.fitBounds(
+                [[6.8771, 79.8112], [7.0785, 79.971]],
                 {}
             );
         

@@ -17,7 +17,7 @@
             <meta name="viewport" content="width=device-width,
                 initial-scale=1.0, maximum-scale=1.0, user-scalable=no" />
             <style>
-                #map_624231b01baf048ed7192b48d6b16700 {
+                #map_16324c0a7608fb4377bbb6b3c4c38dbe {
                     position: relative;
                     width: 100.0%;
                     height: 100.0%;
@@ -56,10 +56,10 @@
     
     
     <div style="position:fixed;top:10px;left:55px;z-index:1000;background:white;
-                padding:10px 16px;border-radius:8px;border:2px solid #2196F3;
+                padding:10px 16px;border-radius:8px;border:2px solid #FF9800;
                 box-shadow:2px 2px 6px rgba(0,0,0,.3);font-family:Arial">
-      <b style="font-size:15px;color:#2196F3">Trip #8 — Base Hospital Karawanella</b><br>
-      <span style="font-size:12px;color:#444">10 Jun 2026 (Wed)</span>
+      <b style="font-size:15px;color:#FF9800">Visit #27 — Mannar</b><br>
+      <span style="font-size:12px;color:#444">12–13 Oct 2026</span>
     </div>
     
     <div style="position:fixed;bottom:30px;left:55px;z-index:1000;background:white;
@@ -73,19 +73,19 @@
       <div><span style="color:#1565C0">⬤</span> <b>Day 1</b></div>
     </div>
     
-            <div class="folium-map" id="map_624231b01baf048ed7192b48d6b16700" ></div>
+            <div class="folium-map" id="map_16324c0a7608fb4377bbb6b3c4c38dbe" ></div>
         
 </body>
 <script>
     
     
-            var map_624231b01baf048ed7192b48d6b16700 = L.map(
-                "map_624231b01baf048ed7192b48d6b16700",
+            var map_16324c0a7608fb4377bbb6b3c4c38dbe = L.map(
+                "map_16324c0a7608fb4377bbb6b3c4c38dbe",
                 {
-                    center: [6.9595, 80.10239999999999],
+                    center: [7.9526, 79.8828],
                     crs: L.CRS.EPSG3857,
                     ...{
-  "zoom": 10,
+  "zoom": 8,
   "zoomControl": true,
   "preferCanvas": false,
 }
@@ -97,7 +97,7 @@
 
         
     
-            var tile_layer_e4c4d17bdf28d91ac9fba17efaee55dd = L.tileLayer(
+            var tile_layer_537e48c7a47b0fc199aab70dec56c4f1 = L.tileLayer(
                 "https://tile.openstreetmap.org/{z}/{x}/{y}.png",
                 {
   "minZoom": 0,
@@ -114,17 +114,17 @@
             );
         
     
-            tile_layer_e4c4d17bdf28d91ac9fba17efaee55dd.addTo(map_624231b01baf048ed7192b48d6b16700);
+            tile_layer_537e48c7a47b0fc199aab70dec56c4f1.addTo(map_16324c0a7608fb4377bbb6b3c4c38dbe);
         
     
-            var marker_41218528625020254b7bfd0d0b022708 = L.marker(
+            var marker_384935f8da7f9ec2aa95c86ba97428f5 = L.marker(
                 [6.9271, 79.8612],
                 {
 }
-            ).addTo(map_624231b01baf048ed7192b48d6b16700);
+            ).addTo(map_16324c0a7608fb4377bbb6b3c4c38dbe);
         
     
-            var icon_7acf00e84d9ca2ea9ddaa93248b2a7d9 = L.AwesomeMarkers.icon(
+            var icon_cbcd3f080adf3184c2089b0d9bbbdaa9 = L.AwesomeMarkers.icon(
                 {
   "markerColor": "red",
   "iconColor": "white",
@@ -135,24 +135,24 @@
             );
         
     
-        var popup_38a57f935b7b96255aebd059ce62fd91 = L.popup({
+        var popup_ca231909ff498ec6ad9c6e7601c9c440 = L.popup({
   "maxWidth": 200,
 });
 
         
             
-                var html_5e2a45b1f8c9b00ffded9b53da7b2fd8 = $(`<div id="html_5e2a45b1f8c9b00ffded9b53da7b2fd8" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
-                popup_38a57f935b7b96255aebd059ce62fd91.setContent(html_5e2a45b1f8c9b00ffded9b53da7b2fd8);
+                var html_b5f4a55184a2a9aaca4769859868405b = $(`<div id="html_b5f4a55184a2a9aaca4769859868405b" style="width: 100.0%; height: 100.0%;"><b>Colombo — HIU Base</b><br>Ministry of Health</div>`)[0];
+                popup_ca231909ff498ec6ad9c6e7601c9c440.setContent(html_b5f4a55184a2a9aaca4769859868405b);
             
         
 
-        marker_41218528625020254b7bfd0d0b022708.bindPopup(popup_38a57f935b7b96255aebd059ce62fd91)
+        marker_384935f8da7f9ec2aa95c86ba97428f5.bindPopup(popup_ca231909ff498ec6ad9c6e7601c9c440)
         ;
 
         
     
     
-            marker_41218528625020254b7bfd0d0b022708.bindTooltip(
+            marker_384935f8da7f9ec2aa95c86ba97428f5.bindTooltip(
                 `<div>
                      Colombo (Base)
                  </div>`,
@@ -162,47 +162,47 @@
             );
         
     
-                marker_41218528625020254b7bfd0d0b022708.setIcon(icon_7acf00e84d9ca2ea9ddaa93248b2a7d9);
+                marker_384935f8da7f9ec2aa95c86ba97428f5.setIcon(icon_cbcd3f080adf3184c2089b0d9bbbdaa9);
             
     
-            var marker_76d35ef9988dc05571a6a7b56b64b54b = L.marker(
-                [6.9919, 80.3436],
+            var marker_a3aa8cef3bd571e50455227fe22b53d6 = L.marker(
+                [8.9781, 79.9044],
                 {
 }
-            ).addTo(map_624231b01baf048ed7192b48d6b16700);
+            ).addTo(map_16324c0a7608fb4377bbb6b3c4c38dbe);
         
     
-            var icon_7cd4c13a02a78122dc6d106ad349b11b = L.AwesomeMarkers.icon(
+            var icon_51c13bdb99c30f20d6c17bb6ded1e389 = L.AwesomeMarkers.icon(
                 {
-  "markerColor": "blue",
+  "markerColor": "green",
   "iconColor": "white",
-  "icon": "plus-square",
+  "icon": "building",
   "prefix": "fa",
   "extraClasses": "fa-rotate-0",
 }
             );
         
     
-        var popup_1ec5e3a4fb2eb84dde47bcfe43778f60 = L.popup({
+        var popup_b741fbc055c617496830fdb0695e741c = L.popup({
   "maxWidth": 280,
 });
 
         
             
-                var html_98146742003c1ff957aba2a78a32b00a = $(`<div id="html_98146742003c1ff957aba2a78a32b00a" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">Base Hospital Karawanella</b><br>       <span style="color:#666">Hospital</span><br><br>       <b>Trip #8:</b> Base Hospital Karawanella<br>       <b>Day 1</b>     </div></div>`)[0];
-                popup_1ec5e3a4fb2eb84dde47bcfe43778f60.setContent(html_98146742003c1ff957aba2a78a32b00a);
+                var html_3217120066b0186860a92d80da56a67b = $(`<div id="html_3217120066b0186860a92d80da56a67b" style="width: 100.0%; height: 100.0%;">     <div style="font-family:Arial;min-width:200px">       <b style="font-size:14px">RDHS Office Mannar</b><br>       <span style="color:#666">RDHS Office</span><br><br>       <b>Visit #27:</b> Mannar<br>       <b>Day 1</b>     </div></div>`)[0];
+                popup_b741fbc055c617496830fdb0695e741c.setContent(html_3217120066b0186860a92d80da56a67b);
             
         
 
-        marker_76d35ef9988dc05571a6a7b56b64b54b.bindPopup(popup_1ec5e3a4fb2eb84dde47bcfe43778f60)
+        marker_a3aa8cef3bd571e50455227fe22b53d6.bindPopup(popup_b741fbc055c617496830fdb0695e741c)
         ;
 
         
     
     
-            marker_76d35ef9988dc05571a6a7b56b64b54b.bindTooltip(
+            marker_a3aa8cef3bd571e50455227fe22b53d6.bindTooltip(
                 `<div>
-                     Day 1: Base Hospital Karawanella
+                     Day 1: RDHS Office Mannar
                  </div>`,
                 {
   "sticky": true,
@@ -210,17 +210,17 @@
             );
         
     
-                marker_76d35ef9988dc05571a6a7b56b64b54b.setIcon(icon_7cd4c13a02a78122dc6d106ad349b11b);
+                marker_a3aa8cef3bd571e50455227fe22b53d6.setIcon(icon_51c13bdb99c30f20d6c17bb6ded1e389);
             
     
-            var marker_9cad9f2c075a5303399cc9487758d909 = L.marker(
-                [6.9919, 80.3436],
+            var marker_d524db0d8223f2d3b5051d88dcad52d8 = L.marker(
+                [8.9781, 79.9044],
                 {
 }
-            ).addTo(map_624231b01baf048ed7192b48d6b16700);
+            ).addTo(map_16324c0a7608fb4377bbb6b3c4c38dbe);
         
     
-            var div_icon_d5f3376d0dd604ea5c0ae80ec8e29760 = L.divIcon({
+            var div_icon_a118defa7931cb76ee916302d0db5ceb = L.divIcon({
   "html": "\u003cdiv style=\"font-size:10px;font-weight:bold;color:#1565C0;background:rgba(255,255,255,0.8);padding:1px 3px;border-radius:3px;white-space:nowrap;margin-top:-28px\"\u003eD1\u003c/div\u003e",
   "iconSize": [30, 20],
   "iconAnchor": [0, 0],
@@ -228,18 +228,18 @@
 });
         
     
-                marker_9cad9f2c075a5303399cc9487758d909.setIcon(div_icon_d5f3376d0dd604ea5c0ae80ec8e29760);
+                marker_d524db0d8223f2d3b5051d88dcad52d8.setIcon(div_icon_a118defa7931cb76ee916302d0db5ceb);
             
     
-            var poly_line_18e5cb5ccd7700f83446070adb3f0fb3 = L.polyline(
-                [[6.9271, 79.8612], [6.9919, 80.3436], [6.9271, 79.8612]],
-                {"bubblingMouseEvents": true, "color": "#2196F3", "dashArray": "8 4", "dashOffset": null, "fill": false, "fillColor": "#2196F3", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
-            ).addTo(map_624231b01baf048ed7192b48d6b16700);
+            var poly_line_c7dbe235e02d4d4dd6093594d169c056 = L.polyline(
+                [[6.9271, 79.8612], [8.9781, 79.9044], [6.9271, 79.8612]],
+                {"bubblingMouseEvents": true, "color": "#FF9800", "dashArray": null, "dashOffset": null, "fill": false, "fillColor": "#FF9800", "fillOpacity": 0.2, "fillRule": "evenodd", "lineCap": "round", "lineJoin": "round", "noClip": false, "opacity": 0.75, "smoothFactor": 1.0, "stroke": true, "weight": 3}
+            ).addTo(map_16324c0a7608fb4377bbb6b3c4c38dbe);
         
     
-            poly_line_18e5cb5ccd7700f83446070adb3f0fb3.bindTooltip(
+            poly_line_c7dbe235e02d4d4dd6093594d169c056.bindTooltip(
                 `<div>
-                     Trip #8 route
+                     Visit #27 route
                  </div>`,
                 {
   "sticky": true,
@@ -247,11 +247,11 @@
             );
         
     
-            ant_path_91e20b5e60781820b0cbed94b8fbd830 = L.polyline.antPath(
-              [[6.9271, 79.8612], [6.9919, 80.3436], [6.9271, 79.8612]],
+            ant_path_21abd04d89003205e8af8ac8349106f4 = L.polyline.antPath(
+              [[6.9271, 79.8612], [8.9781, 79.9044], [6.9271, 79.8612]],
               {
   "stroke": true,
-  "color": "#2196F3",
+  "color": "#FF9800",
   "weight": 3,
   "opacity": 0.5,
   "lineCap": "round",
@@ -262,7 +262,7 @@
 ],
   "dashOffset": null,
   "fill": false,
-  "fillColor": "#2196F3",
+  "fillColor": "#FF9800",
   "fillOpacity": 0.2,
   "fillRule": "evenodd",
   "bubblingMouseEvents": true,
@@ -274,11 +274,11 @@
   "delay": 1200,
   "pulseColor": "#FFFFFF",
 }
-        ).addTo(map_624231b01baf048ed7192b48d6b16700);
+        ).addTo(map_16324c0a7608fb4377bbb6b3c4c38dbe);
         
     
-            map_624231b01baf048ed7192b48d6b16700.fitBounds(
-                [[6.8771, 79.8112], [7.0419, 80.39359999999999]],
+            map_16324c0a7608fb4377bbb6b3c4c38dbe.fitBounds(
+                [[6.8771, 79.8112], [9.0281, 79.95439999999999]],
                 {}
             );
         
